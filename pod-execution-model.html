@@ -1621,35 +1621,46 @@
                 <span class="section-number">17</span>
                 <h1>The Flow</h1>
                 <p class="subtitle">From problem to product. Four phases. No fixed timeline. Scale to fit.</p>
-                <div class="flow-diagram">
-                    <div class="flow-chevron" style="background: #00809B;"><div class="flow-chevron-inner">Discover</div></div>
-                    <div class="flow-chevron" style="background: #e9001f;"><div class="flow-chevron-inner">Prototype</div></div>
-                    <div class="flow-chevron" style="background: #219300;"><div class="flow-chevron-inner">Build</div></div>
-                    <div class="flow-chevron" style="background: #FF991D;"><div class="flow-chevron-inner">Launch</div></div>
+
+                <!-- Integrated flow: chevrons + details as one visual -->
+                <div style="margin-top:48px;">
+                    <div class="flow-diagram">
+                        <div class="flow-chevron" style="background: #00809B;"><div class="flow-chevron-inner">Discover</div></div>
+                        <div class="flow-chevron" style="background: #e9001f;"><div class="flow-chevron-inner">Prototype</div></div>
+                        <div class="flow-chevron" style="background: #219300;"><div class="flow-chevron-inner">Build</div></div>
+                        <div class="flow-chevron" style="background: #FF991D;"><div class="flow-chevron-inner">Launch</div></div>
+                    </div>
+
+                    <!-- Phase descriptions aligned under chevrons -->
+                    <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:0; margin-top:16px;">
+                        <div style="padding-right:14px;">
+                            <div style="font-size:13px; font-weight:700; color:#1a1a1a; margin-bottom:4px;">Understand the problem</div>
+                            <div style="font-size:11px; color:#888; line-height:1.5;">Stakeholder input, context synthesis, scope definition</div>
+                        </div>
+                        <div style="padding:0 14px;">
+                            <div style="font-size:13px; font-weight:700; color:#1a1a1a; margin-bottom:4px;">Validate the solution</div>
+                            <div style="font-size:11px; color:#888; line-height:1.5;">Clickable prototype, user feedback, stakeholder approval</div>
+                        </div>
+                        <div style="padding:0 14px;">
+                            <div style="font-size:13px; font-weight:700; color:#1a1a1a; margin-bottom:4px;">Engineer the product</div>
+                            <div style="font-size:11px; color:#888; line-height:1.5;">Core flow end-to-end, API integration, continuous testing</div>
+                        </div>
+                        <div style="padding-left:14px;">
+                            <div style="font-size:13px; font-weight:700; color:#1a1a1a; margin-bottom:4px;">Ship and learn</div>
+                            <div style="font-size:11px; color:#888; line-height:1.5;">Regression, deploy, capture learnings, feed next cycle</div>
+                        </div>
+                    </div>
+
+                    <!-- Output row -->
+                    <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:0; margin-top:12px; padding-top:10px; border-top:1px solid #eee;">
+                        <div style="font-size:10px; font-weight:600; text-transform:uppercase; letter-spacing:0.5px; color:#00809B; padding-right:14px;">Output: Signed-off PRD →</div>
+                        <div style="font-size:10px; font-weight:600; text-transform:uppercase; letter-spacing:0.5px; color:#e9001f; padding:0 14px;">Output: Approved Prototype →</div>
+                        <div style="font-size:10px; font-weight:600; text-transform:uppercase; letter-spacing:0.5px; color:#219300; padding:0 14px;">Output: Working Build →</div>
+                        <div style="font-size:10px; font-weight:600; text-transform:uppercase; letter-spacing:0.5px; color:#FF991D; padding-left:14px;">Output: Release + Retro ●</div>
+                    </div>
                 </div>
-                <div class="flow-details">
-                    <div class="flow-detail-col">
-                        <div class="flow-detail-title">Understand the problem</div>
-                        <div class="flow-detail-text">Stakeholder input, context synthesis, scope definition</div>
-                        <div class="flow-detail-output">Output: Signed-off PRD →</div>
-                    </div>
-                    <div class="flow-detail-col">
-                        <div class="flow-detail-title">Validate the solution</div>
-                        <div class="flow-detail-text">Clickable prototype, user feedback, stakeholder approval</div>
-                        <div class="flow-detail-output">Output: Approved Prototype →</div>
-                    </div>
-                    <div class="flow-detail-col">
-                        <div class="flow-detail-title">Engineer the product</div>
-                        <div class="flow-detail-text">Core flow end-to-end, API integration, continuous testing throughout</div>
-                        <div class="flow-detail-output">Output: Working Build →</div>
-                    </div>
-                    <div class="flow-detail-col">
-                        <div class="flow-detail-title">Ship and learn</div>
-                        <div class="flow-detail-text">Regression, deploy, capture learnings, feed next cycle</div>
-                        <div class="flow-detail-output">Output: Release + Retro ●</div>
-                    </div>
-                </div>
-                <blockquote class="callout" style="margin-top: 28px;">
+
+                <blockquote class="callout" style="margin-top: 36px;">
                     Each phase has a clear output. The cycle runs in days or months. Same discipline.
                 </blockquote>
             </div>
