@@ -1,0 +1,347 @@
+/* ===== Reset & Base ===== */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #ffffff;
+    color: #1a1a1a;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== Slideshow Container ===== */
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* ===== Slide ===== */
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    background: #ffffff;
+    padding: 60px 80px 100px 80px;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.025) 1px, transparent 1px),
+        linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+    background-size:
+        20px 20px,
+        20px 20px,
+        100px 100px,
+        100px 100px;
+}
+
+.slide.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ===== Slide Content Alignment ===== */
+.slide-content {
+    max-width: 1200px;
+    width: 100%;
+}
+
+.slide-content.slide-center {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-content.slide-left {
+    text-align: left;
+}
+
+/* ===== Logo ===== */
+.logo {
+    margin-bottom: 40px;
+}
+
+/* ===== Typography ===== */
+h1 {
+    font-size: clamp(40px, 5vw, 72px);
+    font-weight: 800;
+    color: #1a1a1a;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+}
+
+.title-main {
+    font-size: clamp(48px, 6vw, 80px);
+    font-weight: 800;
+    color: #1a1a1a;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+}
+
+.subtitle-main {
+    font-size: clamp(16px, 1.5vw, 22px);
+    color: #888888;
+    font-weight: 400;
+    margin-top: 16px;
+}
+
+.subtitle {
+    font-size: clamp(16px, 1.3vw, 20px);
+    color: #888888;
+    font-weight: 400;
+    margin-bottom: 32px;
+    line-height: 1.5;
+}
+
+/* ===== Bullet List ===== */
+.bullet-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 32px;
+}
+
+.bullet-list li {
+    position: relative;
+    padding-left: 28px;
+    font-size: clamp(16px, 1.2vw, 20px);
+    color: #1a1a1a;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    font-weight: 400;
+}
+
+.bullet-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #007D99;
+}
+
+/* ===== Flow Chain ===== */
+.flow-chain {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 24px 0 32px 0;
+}
+
+.flow-box {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background: #f0f0f0;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+    font-size: 15px;
+    color: #1a1a1a;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.flow-arrow {
+    color: #999999;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 0 4px;
+}
+
+/* ===== Callout / Blockquote ===== */
+.callout {
+    border-left: 3px solid #007D99;
+    padding: 0 0 0 20px;
+    margin-top: 8px;
+    font-size: clamp(16px, 1.2vw, 20px);
+    color: #007D99;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+/* ===== Quote Slide ===== */
+.quote-text {
+    font-size: clamp(24px, 3vw, 40px);
+    font-weight: 700;
+    color: #007D99;
+    line-height: 1.4;
+    max-width: 900px;
+    letter-spacing: -0.01em;
+}
+
+.conclusion-sub {
+    font-size: clamp(14px, 1.2vw, 18px);
+    color: #666666;
+    font-weight: 400;
+    margin-top: 32px;
+    max-width: 720px;
+    line-height: 1.6;
+}
+
+/* ===== Navigation Bar ===== */
+.nav-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 64px;
+    background: #f5f5f5;
+    border-top: 1px solid #e8e8e8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    z-index: 100;
+}
+
+.slide-counter {
+    font-size: 14px;
+    color: #999999;
+    font-weight: 400;
+    font-variant-numeric: tabular-nums;
+    min-width: 60px;
+}
+
+.slide-counter .current-slide {
+    color: #1a1a1a;
+    font-weight: 500;
+}
+
+.nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #999999;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.nav-btn:hover {
+    border-color: #aaa;
+    color: #666;
+}
+
+.nav-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.nav-btn:disabled:hover {
+    border-color: #d0d0d0;
+    color: #999999;
+}
+
+/* ===== Slide Dots ===== */
+.slide-dots {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.slide-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #c8c8c8;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    padding: 0;
+}
+
+.slide-dot.active {
+    width: 28px;
+    border-radius: 4px;
+    background: #007D99;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .slide {
+        padding: 40px 32px 100px 32px;
+    }
+
+    .nav-bar {
+        padding: 0 20px;
+    }
+
+    .flow-chain {
+        gap: 6px;
+    }
+
+    .flow-box {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .flow-arrow {
+        font-size: 14px;
+    }
+
+    .nav-controls {
+        gap: 10px;
+    }
+
+    .slide-dots {
+        gap: 6px;
+    }
+
+    .slide-dot {
+        width: 6px;
+        height: 6px;
+    }
+
+    .slide-dot.active {
+        width: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .slide {
+        padding: 24px 20px 100px 20px;
+    }
+
+    .flow-chain {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
