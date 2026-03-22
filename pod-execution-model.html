@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pod Execution Model v1</title>
-    <meta name="description" content="Pod Execution Model - How pods ship working software in 30 days">
+    <meta name="description" content="Pod Execution Model - How pods ship working software fast">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
@@ -138,7 +138,7 @@
         }
 
         .not-allowed-col h3 {
-            color: #D94F5C;
+            color: #e9001f;
         }
 
         .allowed-col ul,
@@ -169,7 +169,7 @@
             content: '✕';
             position: absolute;
             left: 0;
-            color: #D94F5C;
+            color: #e9001f;
             font-weight: 700;
         }
 
@@ -251,7 +251,7 @@
         }
 
         .done-no h3 {
-            color: #D94F5C;
+            color: #e9001f;
         }
 
         .done-yes ul,
@@ -282,7 +282,7 @@
             content: '✕';
             position: absolute;
             left: 0;
-            color: #D94F5C;
+            color: #e9001f;
             font-weight: 700;
         }
 
@@ -450,7 +450,7 @@
             font-weight: 600;
             letter-spacing: 3px;
             text-transform: uppercase;
-            color: #D94F5C;
+            color: #e9001f;
             margin-bottom: 8px;
         }
 
@@ -925,6 +925,150 @@
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
+
+        /* Flow Diagram */
+        .flow-diagram {
+            display: flex;
+            margin-top: 36px;
+            margin-bottom: 8px;
+        }
+
+        .flow-chevron {
+            flex: 1;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+            color: #1a1a1a;
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 50%, calc(100% - 18px) 100%, 0 100%, 18px 50%);
+            margin-right: -1px;
+            position: relative;
+        }
+
+        .flow-chevron-inner {
+            position: absolute;
+            inset: 3px;
+            background: #fff;
+            clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 50%, calc(100% - 16px) 100%, 0 100%, 22px 50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+
+        .flow-chevron:first-child {
+            clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 50%, calc(100% - 18px) 100%, 0 100%);
+            border-radius: 6px 0 0 6px;
+        }
+
+        .flow-chevron:first-child .flow-chevron-inner {
+            clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 50%, calc(100% - 16px) 100%, 0 100%);
+            border-radius: 4px 0 0 4px;
+        }
+
+        .flow-chevron:last-child {
+            border-radius: 0 6px 6px 0;
+        }
+
+        .flow-chevron span {
+            font-size: 11px;
+            font-weight: 400;
+            opacity: 0.8;
+            margin-left: 6px;
+        }
+
+        .flow-details {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+            margin-top: 24px;
+        }
+
+        .flow-detail-col {
+            padding: 0 16px;
+            border-left: 2px solid #e0e0e0;
+        }
+
+        .flow-detail-col:first-child {
+            padding-left: 0;
+            border-left: none;
+        }
+
+        .flow-detail-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 4px;
+        }
+
+        .flow-detail-text {
+            font-size: 12px;
+            color: #777;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+
+        .flow-detail-output {
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #00809B;
+        }
+
+        /* Phase Swimlane */
+        .phase-swimlane {
+            margin-top: 20px;
+        }
+
+        .phase-header {
+            display: grid;
+            grid-template-columns: 80px repeat(4, 1fr);
+            gap: 0;
+            border-bottom: 2px solid #1a1a1a;
+            padding-bottom: 8px;
+            margin-bottom: 0;
+        }
+
+        .phase-header span {
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #555;
+        }
+
+        .phase-row {
+            display: grid;
+            grid-template-columns: 80px repeat(4, 1fr);
+            gap: 0;
+            border-bottom: 1px solid #f0f0f0;
+            padding: 10px 0;
+            align-items: start;
+        }
+
+        .phase-label {
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .phase-cell {
+            font-size: 11px;
+            color: #999;
+            line-height: 1.4;
+            padding-right: 12px;
+        }
+
+        .phase-cell-peak {
+            color: #1a1a1a;
+            font-weight: 600;
+        }
     </style>
 </head>
 
@@ -964,7 +1108,7 @@
                     </svg>
                 </div>
                 <h1 class="title-main">Pod Execution Model</h1>
-                <p class="subtitle-main">How pods ship working software in 30 days</p>
+                <p class="subtitle-main">How pods ship working software as fast as possible</p>
             </div>
         </div>
 
@@ -982,7 +1126,7 @@
                     <li>AI fills the gaps that used to require more people</li>
                 </ul>
                 <blockquote class="callout">
-                    Calendar ships in 30 days. That proves the model. Then it spreads.
+                    Calendar ships fast. That proves the model. Then it spreads.
                 </blockquote>
             </div>
         </div>
@@ -1392,7 +1536,7 @@
                         <h3>Calendar Pod</h3>
                         <div class="pod-owner">Steve · Damion · Denny</div>
                         <ul>
-                            <li>Ship calendar in 30 days. Operational, not polished</li>
+                            <li>Ship calendar as fast as possible. Operational, not polished</li>
                             <li>Learn what inputs are actually required to iterate fast</li>
                             <li>This is the proving ground. If it works, the model spreads org-wide after May release
                             </li>
@@ -1432,13 +1576,13 @@
             <div class="slide-content slide-left">
                 <span class="section-number">14</span>
                 <h1>Timeline</h1>
-                <p class="subtitle">Definition to deployment in 30 days. Calendar is the pilot.</p>
+                <p class="subtitle">Definition to deployment in rapid cycles. Calendar is the pilot.</p>
                 <ul class="bullet-list">
                     <li><strong>This Week:</strong> Staff the Forward Deployed pod (engineer + designer for Jordan).
                         Confirm all three pod rosters</li>
                     <li><strong>Next Week:</strong> Education and alignment meeting with everyone in all three pods.
                         Calendar pod kicks off immediately after</li>
-                    <li><strong>Within 30 Days:</strong> Calendar pod ships working product. Model validated. Team can
+                    <li><strong>As Fast As Possible:</strong> Calendar pod ships working product. Model validated. Team can
                         articulate what inputs are actually needed</li>
                     <li><strong>After May Release:</strong> Pod model rolls out org-wide. Calendar pod becomes the
                         template every new team follows</li>
@@ -1458,200 +1602,171 @@
                     <li>Designers move into VS Code. Layout ships as working HTML, not Figma files</li>
                     <li>Engineers direct AI, not write every line. Scaffolding, iteration, testing all accelerated</li>
                     <li>QA is everyone's job, embedded from day 1. No downstream handoff</li>
-                    <li>30 days, not 10 months. New muscle memory starts now</li>
+                    <li>Weeks, not months. New muscle memory starts now</li>
                 </ul>
             </div>
         </div>
 
-        <!-- Slide 16: 30-Day System Section Header -->
+        <!-- Slide 16: System Section Header -->
         <div class="slide" data-slide="16">
             <div class="slide-content slide-center">
                 <span class="section-divider">Appendix</span>
-                <h1 class="title-main" style="font-size: 48px;">30-Day Delivery System</h1>
+                <h1 class="title-main" style="font-size: 48px;">Pod Execution System</h1>
             </div>
         </div>
 
-
-        <!-- Slide 17: Swimlane by Function -->
+        <!-- Slide 17: The Flow (Visual) -->
         <div class="slide" data-slide="17">
             <div class="slide-content slide-left">
-                <span class="section-number">18</span>
-                <h1>Swimlane by Function</h1>
-                <p class="subtitle">Who does what, when. Every role has peak weeks but stays engaged the full cycle.</p>
-                <div class="swimlane-chart">
-                    <div class="swimlane-header">
-                        <span></span>
-                        <span>Week 1</span>
-                        <span>Week 2</span>
-                        <span>Week 3</span>
-                        <span>Week 4</span>
+                <span class="section-number">17</span>
+                <h1>The Flow</h1>
+                <p class="subtitle">From problem to product. Four phases. No fixed timeline. Scale to fit.</p>
+                <div class="flow-diagram">
+                    <div class="flow-chevron" style="background: #00809B;"><div class="flow-chevron-inner">Discover</div></div>
+                    <div class="flow-chevron" style="background: #e9001f;"><div class="flow-chevron-inner">Prototype</div></div>
+                    <div class="flow-chevron" style="background: #219300;"><div class="flow-chevron-inner">Build</div></div>
+                    <div class="flow-chevron" style="background: #FF991D;"><div class="flow-chevron-inner">Launch</div></div>
+                </div>
+                <div class="flow-details">
+                    <div class="flow-detail-col">
+                        <div class="flow-detail-title">Understand the problem</div>
+                        <div class="flow-detail-text">Stakeholder input, context synthesis, scope definition</div>
+                        <div class="flow-detail-output">Output: Signed-off PRD →</div>
                     </div>
-                    <div class="swimlane-row">
-                        <div class="lane-label" style="color: #00809B; border-left-color: #00809B;">PM</div>
-                        <div class="lane-cell lane-peak">Meetings, transcripts, PRD, scope definition</div>
-                        <div class="lane-cell lane-peak">Build HTML prototype, validate with stakeholders</div>
-                        <div class="lane-cell">Refine scope, cut non-core, support testing</div>
-                        <div class="lane-cell">Soft launch coordination, feedback capture</div>
+                    <div class="flow-detail-col">
+                        <div class="flow-detail-title">Validate the solution</div>
+                        <div class="flow-detail-text">Clickable prototype, user feedback, stakeholder approval</div>
+                        <div class="flow-detail-output">Output: Approved Prototype →</div>
                     </div>
-                    <div class="swimlane-row">
-                        <div class="lane-label" style="color: #e9001f; border-left-color: #e9001f;">Designer</div>
-                        <div class="lane-cell">Research, competitor audit, pattern library</div>
-                        <div class="lane-cell lane-peak">Refine prototype, add all states and flows</div>
-                        <div class="lane-cell lane-peak">Polish interactions directly in codebase</div>
-                        <div class="lane-cell">Final interaction polish, launch visuals</div>
+                    <div class="flow-detail-col">
+                        <div class="flow-detail-title">Engineer the product</div>
+                        <div class="flow-detail-text">Core flow end-to-end, API integration, continuous testing throughout</div>
+                        <div class="flow-detail-output">Output: Working Build →</div>
                     </div>
-                    <div class="swimlane-row">
-                        <div class="lane-label" style="color: #219300; border-left-color: #219300;">Engineer</div>
-                        <div class="lane-cell">Tech assessment, integration mapping, env setup</div>
-                        <div class="lane-cell">Scaffold real app from prototype patterns</div>
-                        <div class="lane-cell lane-peak">Core flow end-to-end, API integration, testing</div>
-                        <div class="lane-cell lane-peak">Bug fixes, edge cases, deploy, release</div>
-                    </div>
-                    <div class="swimlane-row">
-                        <div class="lane-label" style="color: #FF991D; border-left-color: #FF991D;">QA</div>
-                        <div class="lane-cell">Define test strategy from PRD</div>
-                        <div class="lane-cell">Test prototype. Shape requirements through bugs</div>
-                        <div class="lane-cell lane-peak">Continuous testing on real builds. Edge cases</div>
-                        <div class="lane-cell lane-peak">Regression pass. Release sign-off</div>
-                    </div>
-                    <div class="swimlane-row">
-                        <div class="lane-label" style="color: #333; border-left-color: #333;">Pod Lead</div>
-                        <div class="lane-cell lane-peak">Scope lock. Define day-30 outcome. Set cadence</div>
-                        <div class="lane-cell">Stakeholder demo. Capture feedback. Hold scope</div>
-                        <div class="lane-cell">Mid-sprint check. Kill scope creep. Unblock</div>
-                        <div class="lane-cell lane-peak">Release decision. Retrospective. Capture learnings</div>
+                    <div class="flow-detail-col">
+                        <div class="flow-detail-title">Ship and learn</div>
+                        <div class="flow-detail-text">Regression, deploy, capture learnings, feed next cycle</div>
+                        <div class="flow-detail-output">Output: Release + Retro ●</div>
                     </div>
                 </div>
-                <div class="swimlane-legend">
-                    <div class="legend-item"><span class="legend-dot legend-dot-filled"></span> Peak contribution</div>
-                    <div class="legend-item"><span class="legend-dot legend-dot-hollow"></span> Supporting</div>
-                </div>
-                <blockquote class="callout" style="margin-top: 16px;">
-                    This is not waterfall. Roles overlap. Weeks compress. Days can collapse. The grid shows peak ownership, not sequential handoffs.
+                <blockquote class="callout" style="margin-top: 28px;">
+                    Each phase has a clear output. The cycle runs in days or months. Same discipline.
                 </blockquote>
             </div>
         </div>
 
-        <!-- Slide 18: Pod Operating Rhythm -->
+        <!-- Slide 18: Who Drives Each Phase -->
         <div class="slide" data-slide="18">
             <div class="slide-content slide-left">
-                <span class="section-number">19</span>
-                <h1>Pod Operating Rhythm</h1>
-                <p class="subtitle">Four rituals. Non-negotiable cadence. This is how discipline becomes culture.</p>
-                <div class="rhythm-grid">
-                    <div class="rhythm-row">
-                        <div class="rhythm-title-block" style="border-left-color: #00809B;">
-                            <h3>Morning Standup</h3>
-                            <div class="rhythm-freq" style="color: #00809B;">Daily · 15 min</div>
-                        </div>
-                        <div class="rhythm-details">
-                            <span>What shipped yesterday. Show, don't tell</span>
-                            <span>What ships today. Specific, named deliverable</span>
-                            <span>What's blocked. Pod Lead resolves same day</span>
-                        </div>
+                <span class="section-number">18</span>
+                <h1>Who Drives Each Phase</h1>
+                <p class="subtitle">Every role is engaged every phase. Bold = peak ownership. The flow, not the calendar, determines who leads.</p>
+                <div class="phase-swimlane">
+                    <div class="phase-header">
+                        <span></span>
+                        <span>Discover</span>
+                        <span>Prototype</span>
+                        <span>Build</span>
+                        <span>Launch</span>
                     </div>
-                    <div class="rhythm-row">
-                        <div class="rhythm-title-block" style="border-left-color: #e9001f;">
-                            <h3>Prototype Review</h3>
-                            <div class="rhythm-freq" style="color: #e9001f;">2× Weekly · 30 min</div>
-                        </div>
-                        <div class="rhythm-details">
-                            <span>Demo the current working build, not a deck</span>
-                            <span>Capture feedback on the real thing</span>
-                            <span>Scope check. Does this still fit the 30-day window?</span>
-                        </div>
+                    <div class="phase-row">
+                        <div class="phase-label" style="color: #00809B;">PM</div>
+                        <div class="phase-cell phase-cell-peak">Meetings, synthesize PRD, lock scope</div>
+                        <div class="phase-cell phase-cell-peak">Build clickable prototype, validate with users</div>
+                        <div class="phase-cell">Refine scope, cut non-core, support testing</div>
+                        <div class="phase-cell">Soft launch coordination, feedback capture</div>
                     </div>
-                    <div class="rhythm-row">
-                        <div class="rhythm-title-block" style="border-left-color: #219300;">
-                            <h3>Weekly Gate Review</h3>
-                            <div class="rhythm-freq" style="color: #219300;">Weekly · 30 min</div>
-                        </div>
-                        <div class="rhythm-details">
-                            <span>Did we hit the week's deliverable? Yes or no</span>
-                            <span>What gets cut if we're behind?</span>
-                            <span>Scope creep check. Kill or defer</span>
-                            <span>Next week's deliverable defined and assigned</span>
-                        </div>
+                    <div class="phase-row">
+                        <div class="phase-label" style="color: #e9001f;">Designer</div>
+                        <div class="phase-cell">Research, competitor audit, pattern library</div>
+                        <div class="phase-cell phase-cell-peak">Refine prototype, add all states and flows</div>
+                        <div class="phase-cell phase-cell-peak">Polish interactions directly in codebase</div>
+                        <div class="phase-cell">Final interaction polish, launch visuals</div>
                     </div>
-                    <div class="rhythm-row">
-                        <div class="rhythm-title-block" style="border-left-color: #FF991D;">
-                            <h3>Day 30 Retrospective</h3>
-                            <div class="rhythm-freq" style="color: #FF991D;">End of cycle · 60 min</div>
-                        </div>
-                        <div class="rhythm-details">
-                            <span>What shipped vs. what was planned</span>
-                            <span>What inputs worked, what didn't</span>
-                            <span>Process improvements for next cycle</span>
-                            <span>Document the template for the next team</span>
-                        </div>
+                    <div class="phase-row">
+                        <div class="phase-label" style="color: #219300;">Engineer</div>
+                        <div class="phase-cell">Tech assessment, integration mapping, env setup</div>
+                        <div class="phase-cell">Scaffold real app from prototype patterns</div>
+                        <div class="phase-cell phase-cell-peak">Core flow end-to-end, API integration, testing</div>
+                        <div class="phase-cell phase-cell-peak">Bug fixes, edge cases, deploy, release</div>
+                    </div>
+                    <div class="phase-row">
+                        <div class="phase-label" style="color: #FF991D;">QA</div>
+                        <div class="phase-cell">Define test strategy from PRD</div>
+                        <div class="phase-cell">Test prototype, shape requirements through bugs</div>
+                        <div class="phase-cell phase-cell-peak">Continuous testing on real builds, edge cases</div>
+                        <div class="phase-cell phase-cell-peak">Regression pass, release sign-off</div>
+                    </div>
+                    <div class="phase-row">
+                        <div class="phase-label" style="color: #333;">Pod Lead</div>
+                        <div class="phase-cell phase-cell-peak">Scope lock, define done, set cadence</div>
+                        <div class="phase-cell">Stakeholder demo, capture feedback, hold scope</div>
+                        <div class="phase-cell">Mid-cycle check, kill scope creep, unblock</div>
+                        <div class="phase-cell phase-cell-peak">Release decision, retrospective, capture lessons</div>
                     </div>
                 </div>
+                <blockquote class="callout" style="margin-top: 16px;">
+                    This is not waterfall. Roles overlap. Phases compress. The grid shows peak ownership, not sequential handoffs.
+                </blockquote>
             </div>
         </div>
 
-        <!-- Slide 19: 30 Days at a Glance -->
+        <!-- Slide 19: Iteration Mechanisms -->
         <div class="slide" data-slide="19">
             <div class="slide-content slide-left">
-                <span class="section-number">20</span>
-                <h1>30 Days at a Glance</h1>
-                <p class="subtitle">Every role mapped across 30 days. Dark = peak contribution. Light = supporting.</p>
-                <div class="system-view">
-                    <div class="system-row">
-                        <div class="system-label" style="color: #00809B;">PM</div>
-                        <div class="system-bar-container">
-                            <div class="system-bar bar-pm bar-full" style="grid-column: 1/8;"></div>
-                            <div class="system-bar bar-pm bar-full" style="grid-column: 8/15;"></div>
-                            <div class="system-bar bar-pm bar-med" style="grid-column: 15/22;"></div>
-                            <div class="system-bar bar-pm bar-med" style="grid-column: 22/31;"></div>
-                        </div>
+                <span class="section-number">19</span>
+                <h1>Iteration Mechanisms</h1>
+                <p class="subtitle">The system doesn't end at launch. Every cycle feeds the next.</p>
+
+                <!-- Segmented cycle bar -->
+                <div style="margin-top:40px;">
+                    <div style="display:flex; margin-bottom:6px;">
+                        <div style="flex:1; font-size:12px; font-weight:700; color:#219300; text-transform:uppercase; letter-spacing:1px;">Ship</div>
+                        <div style="flex:1; font-size:12px; font-weight:700; color:#00809B; text-transform:uppercase; letter-spacing:1px;">Learn</div>
+                        <div style="flex:1; font-size:12px; font-weight:700; color:#e9001f; text-transform:uppercase; letter-spacing:1px;">Adjust</div>
+                        <div style="flex:1; font-size:12px; font-weight:700; color:#FF991D; text-transform:uppercase; letter-spacing:1px;">Repeat</div>
                     </div>
-                    <div class="system-row">
-                        <div class="system-label" style="color: #e9001f;">Designer</div>
-                        <div class="system-bar-container">
-                            <div class="system-bar bar-design bar-med" style="grid-column: 1/8;"></div>
-                            <div class="system-bar bar-design bar-full" style="grid-column: 8/15;"></div>
-                            <div class="system-bar bar-design bar-full" style="grid-column: 15/22;"></div>
-                            <div class="system-bar bar-design bar-light" style="grid-column: 22/31;"></div>
-                        </div>
+                    <div style="display:flex; height:28px; border-radius:4px; overflow:hidden;">
+                        <div style="flex:1; background:#219300;"></div>
+                        <div style="flex:1; background:#00809B;"></div>
+                        <div style="flex:1; background:#e9001f;"></div>
+                        <div style="flex:1; background:#FF991D;"></div>
                     </div>
-                    <div class="system-row">
-                        <div class="system-label" style="color: #219300;">Engineer</div>
-                        <div class="system-bar-container">
-                            <div class="system-bar bar-eng bar-light" style="grid-column: 1/8;"></div>
-                            <div class="system-bar bar-eng bar-med" style="grid-column: 8/15;"></div>
-                            <div class="system-bar bar-eng bar-full" style="grid-column: 15/22;"></div>
-                            <div class="system-bar bar-eng bar-full" style="grid-column: 22/31;"></div>
-                        </div>
+                    <div style="display:flex; margin-top:4px;">
+                        <div style="flex:1; font-size:11px; color:#888;">Deploy to users</div>
+                        <div style="flex:1; font-size:11px; color:#888;">Measure impact</div>
+                        <div style="flex:1; font-size:11px; color:#888;">Decide what's next</div>
+                        <div style="flex:1; font-size:11px; color:#888;">Re-enter the flow</div>
                     </div>
-                    <div class="system-row">
-                        <div class="system-label" style="color: #FF991D;">QA</div>
-                        <div class="system-bar-container">
-                            <div class="system-bar bar-qa bar-light" style="grid-column: 1/8;"></div>
-                            <div class="system-bar bar-qa bar-med" style="grid-column: 8/15;"></div>
-                            <div class="system-bar bar-qa bar-full" style="grid-column: 15/22;"></div>
-                            <div class="system-bar bar-qa bar-full" style="grid-column: 22/31;"></div>
-                        </div>
+
+                    <!-- Loop-back arrow -->
+                    <div style="position:relative; height:36px; margin-top:4px;">
+                        <svg width="100%" height="36" viewBox="0 0 800 36" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M760 4 L760 20 Q760 28 752 28 L48 28 Q40 28 40 20 L40 14" stroke="#00809B" stroke-width="2" fill="none" stroke-dasharray="4 3"/>
+                            <polygon points="36,18 40,8 44,18" fill="#00809B"/>
+                        </svg>
                     </div>
-                    <div class="system-row">
-                        <div class="system-label" style="color: #333;">Pod Lead</div>
-                        <div class="system-bar-container">
-                            <div class="system-bar bar-alex bar-full" style="grid-column: 1/8;"></div>
-                            <div class="system-bar bar-alex bar-med" style="grid-column: 8/15;"></div>
-                            <div class="system-bar bar-alex bar-med" style="grid-column: 15/22;"></div>
-                            <div class="system-bar bar-alex bar-full" style="grid-column: 22/31;"></div>
-                        </div>
+                    <div style="text-align:center; font-size:10px; font-weight:600; color:#00809B; text-transform:uppercase; letter-spacing:1.5px; margin-top:-4px;">Continuous cycle</div>
+                </div>
+
+                <!-- Three outcomes -->
+                <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:0; margin-top:32px; border-top:2px solid #1a1a1a; padding-top:16px;">
+                    <div style="padding-right:16px;">
+                        <div style="font-size:13px; font-weight:700; color:#1a1a1a; margin-bottom:4px;">After every release</div>
+                        <div style="font-size:12px; color:#777; line-height:1.5;">Retro within 48 hours. What shipped, what slipped, what we learned.</div>
                     </div>
-                    <div class="system-day-markers">
-                        <span></span>
-                        <span><strong>Week 1: Discover</strong></span>
-                        <span><strong>Week 2: Prototype</strong></span>
-                        <span><strong>Week 3: Build</strong></span>
-                        <span><strong>Week 4: Launch</strong></span>
+                    <div style="padding:0 16px; border-left:1px solid #e0e0e0;">
+                        <div style="font-size:13px; font-weight:700; color:#1a1a1a; margin-bottom:4px;">Continuous feedback</div>
+                        <div style="font-size:12px; color:#777; line-height:1.5;">Usage data flows directly into the next cycle. No separate research sprint.</div>
+                    </div>
+                    <div style="padding-left:16px; border-left:1px solid #e0e0e0;">
+                        <div style="font-size:13px; font-weight:700; color:#1a1a1a; margin-bottom:4px;">Compounding speed</div>
+                        <div style="font-size:12px; color:#777; line-height:1.5;">Patterns become reusable. The pod gets faster. Each cycle builds on the last.</div>
                     </div>
                 </div>
-                <blockquote class="callout" style="margin-top: 24px;">
-                    Every day has a purpose. Every week has a gate. Every role has defined work. The system runs the
-                    same way every time.
+
+                <blockquote class="callout" style="margin-top:24px;">
+                    Speed is earned, not assumed. The system compounds.
                 </blockquote>
             </div>
         </div>
