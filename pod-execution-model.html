@@ -433,8 +433,8 @@
 
         .corner-brand {
             position: fixed;
-            top: 30px;
-            left: 40px;
+            top: 40px;
+            left: 10px;
             opacity: 1;
             z-index: 5;
             pointer-events: none;
@@ -1087,6 +1087,11 @@
             <circle cx="70" cy="52" r="5" fill="#007D99" />
         </svg>
     </div>
+    <!-- Top-left corner: Draft label + PDF download -->
+    <div style="position:fixed; top:16px; left:20px; z-index:100; display:flex; align-items:center; gap:12px;" class="draft-bar">
+        <span style="font-size:9px; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; color:#1a1a1a;">Current Draft · Mar 22, 2026</span>
+        <a href="pod-execution-model.pdf" download style="text-decoration:none; display:inline-flex; align-items:center; gap:4px; border:1.5px solid #1a1a1a; border-radius:4px; padding:3px 8px; font-size:9px; font-weight:700; color:#1a1a1a; text-transform:uppercase; letter-spacing:0.5px; transition:background 0.2s, color 0.2s;" onmouseover="this.style.background='#1a1a1a';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='#1a1a1a'">↓ PDF</a>
+    </div>
     <div class="slideshow-container">
         <!-- Slide 1: Title -->
         <div class="slide active" data-slide="1">
@@ -1131,85 +1136,8 @@
             </div>
         </div>
 
-        <!-- Slide 3: The New Way (Hero Flow) -->
+        <!-- Slide 3: The New Way Is Continuous (Animated Circles + Content) -->
         <div class="slide" data-slide="3">
-            <div class="slide-content slide-left">
-                <h1 style="margin-bottom:4px;">The New Way</h1>
-                <p class="subtitle">Four phases. Each has a clear output. No fixed calendar.</p>
-
-                <!-- Four vertical panels -->
-                <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:20px; margin-top:48px;">
-                    <!-- Panel 1: Discover -->
-                    <div style="border-top:4px solid #00809B; padding-top:20px;">
-                        <div style="font-size:36px; font-weight:900; color:#00809B; letter-spacing:-1px; line-height:1;">01</div>
-                        <div style="font-size:18px; font-weight:800; color:#1a1a1a; margin-top:8px;">Discover</div>
-                        <div style="margin-top:14px;">
-                            <div style="border:2px solid #00809B; border-radius:5px; padding:8px 10px; font-size:12px; font-weight:600; color:#1a1a1a; text-align:center; background:#f6fbfc;">Stakeholder input</div>
-                            <div style="text-align:center; color:#00809B; font-size:11px; line-height:1.2;">▼</div>
-                            <div style="border:2px solid #5ab3c5; border-radius:5px; padding:8px 10px; font-size:12px; font-weight:600; color:#1a1a1a; text-align:center; background:#f6fbfc;">Context synthesis</div>
-                            <div style="text-align:center; color:#99cdd8; font-size:11px; line-height:1.2;">▼</div>
-                            <div style="border:2px solid #8ec9d5; border-radius:5px; padding:8px 10px; font-size:12px; font-weight:600; color:#1a1a1a; text-align:center; background:#f6fbfc;">PRD + prompt aligned</div>
-                        </div>
-                        <div style="font-size:10px; font-weight:600; text-transform:uppercase; letter-spacing:0.5px; color:#00809B; margin-top:14px; padding-top:10px; border-top:1px solid #eee;">Output: Signed-off PRD</div>
-                    </div>
-                    <!-- Panel 2: Prototype -->
-                    <div style="border-top:4px solid #e9001f; padding-top:20px;">
-                        <div style="font-size:36px; font-weight:900; color:#e9001f; letter-spacing:-1px; line-height:1;">02</div>
-                        <div style="font-size:18px; font-weight:800; color:#1a1a1a; margin-top:8px;">Prototype</div>
-                        <div style="margin-top:14px;">
-                            <div style="border:2px solid #e9001f; border-radius:5px; padding:8px 10px; font-size:12px; font-weight:600; color:#1a1a1a; text-align:center; background:#fef5f6;">Same-day prototype</div>
-                            <div style="text-align:center; color:#e9001f; font-size:11px; line-height:1.2;">▼</div>
-                            <div style="border:2px solid #f06070; border-radius:5px; padding:8px 10px; font-size:12px; font-weight:600; color:#1a1a1a; text-align:center; background:#fef5f6;">User feedback</div>
-                            <div style="text-align:center; color:#f5a0a9; font-size:11px; line-height:1.2;">▼</div>
-                            <div style="border:2px solid #f09098; border-radius:5px; padding:8px 10px; font-size:12px; font-weight:600; color:#1a1a1a; text-align:center; background:#fef5f6;">Stakeholder sign-off</div>
-                        </div>
-                        <div style="font-size:10px; font-weight:600; text-transform:uppercase; letter-spacing:0.5px; color:#e9001f; margin-top:14px; padding-top:10px; border-top:1px solid #eee;">Output: Approved Prototype</div>
-                    </div>
-                    <!-- Panel 3: Build -->
-                    <div style="border-top:4px solid #219300; padding-top:20px;">
-                        <div style="font-size:36px; font-weight:900; color:#219300; letter-spacing:-1px; line-height:1;">03</div>
-                        <div style="font-size:18px; font-weight:800; color:#1a1a1a; margin-top:8px;">Build</div>
-                        <div style="margin-top:14px;">
-                            <div style="border:2px solid #219300; border-radius:5px; padding:8px 10px; font-size:12px; font-weight:600; color:#1a1a1a; text-align:center; background:#f5faf4;">Rapid code generation</div>
-                            <div style="text-align:center; color:#219300; font-size:11px; line-height:1.2;">▼</div>
-                            <div style="border:2px solid #5db545; border-radius:5px; padding:8px 10px; font-size:12px; font-weight:600; color:#1a1a1a; text-align:center; background:#f5faf4;">API integration</div>
-                            <div style="text-align:center; color:#8ccc7a; font-size:11px; line-height:1.2;">▼</div>
-                            <div style="border:2px solid #84c470; border-radius:5px; padding:8px 10px; font-size:12px; font-weight:600; color:#1a1a1a; text-align:center; background:#f5faf4;">Continuous testing</div>
-                        </div>
-                        <div style="font-size:10px; font-weight:600; text-transform:uppercase; letter-spacing:0.5px; color:#219300; margin-top:14px; padding-top:10px; border-top:1px solid #eee;">Output: Working Build</div>
-                    </div>
-                    <!-- Panel 4: Launch -->
-                    <div style="border-top:4px solid #FF991D; padding-top:20px;">
-                        <div style="font-size:36px; font-weight:900; color:#FF991D; letter-spacing:-1px; line-height:1;">04</div>
-                        <div style="font-size:18px; font-weight:800; color:#1a1a1a; margin-top:8px;">Launch</div>
-                        <div style="margin-top:14px;">
-                            <div style="border:2px solid #FF991D; border-radius:5px; padding:8px 10px; font-size:12px; font-weight:600; color:#1a1a1a; text-align:center; background:#fffaf3;">Ship to users</div>
-                            <div style="text-align:center; color:#FF991D; font-size:11px; line-height:1.2;">▼</div>
-                            <div style="border:2px solid #ffbb60; border-radius:5px; padding:8px 10px; font-size:12px; font-weight:600; color:#1a1a1a; text-align:center; background:#fffaf3;">Retro + learnings</div>
-                            <div style="text-align:center; color:#ffc880; font-size:11px; line-height:1.2;">▼</div>
-                            <div style="border:2px solid #ffc880; border-radius:5px; padding:8px 10px; font-size:12px; font-weight:600; color:#1a1a1a; text-align:center; background:#fffaf3;">Feed next cycle</div>
-                        </div>
-                        <div style="font-size:10px; font-weight:600; text-transform:uppercase; letter-spacing:0.5px; color:#FF991D; margin-top:14px; padding-top:10px; border-top:1px solid #eee;">Output: Release + Retro</div>
-                    </div>
-                </div>
-
-                <!-- Continuous cycle indicator -->
-                <div style="display:flex; align-items:center; gap:8px; margin-top:20px;">
-                    <span style="font-size:12px; color:#bbb;">◀</span>
-                    <div style="flex:1; border-top:1.5px dashed #ddd;"></div>
-                    <span style="font-size:9px; font-weight:600; text-transform:uppercase; letter-spacing:1px; color:#bbb;">Continuous cycle</span>
-                    <div style="flex:1; border-top:1.5px dashed #ddd;"></div>
-                    <span style="font-size:12px; color:#bbb;">▶</span>
-                </div>
-
-                <blockquote class="callout" style="margin-top:36px;">
-                    Each phase has a clear output. The cycle runs as fast as possible. Same discipline every time.
-                </blockquote>
-            </div>
-        </div>
-
-        <!-- Slide 4: The New Way Is Continuous (Animated Circles + Content) -->
-        <div class="slide" data-slide="4">
             <div class="slide-content slide-left">
                 <h1 style="margin-bottom:4px;">The New Way Is Continuous</h1>
                 <p class="subtitle" style="margin-bottom:24px;">Every delivery strengthens the next. The system learns as it runs.</p>
@@ -1282,7 +1210,7 @@
         </div>
 
         <!-- Slide 5: Pod Structure -->
-        <div class="slide" data-slide="5">
+        <div class="slide" data-slide="4">
             <div class="slide-content slide-left">
                 <span class="section-number">02</span>
                 <h1>Pod Structure</h1>
@@ -1334,7 +1262,7 @@
         </div>
 
         <!-- Slide 4: Inputs Replace Deliverables (Overview) -->
-        <div class="slide" data-slide="6">
+        <div class="slide" data-slide="5">
             <div class="slide-content slide-left">
                 <span class="section-number">03</span>
                 <h1>Inputs Replace Deliverables</h1>
@@ -1369,7 +1297,7 @@
         </div>
 
         <!-- Slide 5: PM Inputs -->
-        <div class="slide" data-slide="7">
+        <div class="slide" data-slide="6">
             <div class="slide-content slide-left">
                 <span class="section-number">04</span>
                 <h1>PM Inputs</h1>
@@ -1423,7 +1351,7 @@
         </div>
 
         <!-- Slide 6: Designer Inputs -->
-        <div class="slide" data-slide="8">
+        <div class="slide" data-slide="7">
             <div class="slide-content slide-left">
                 <span class="section-number">05</span>
                 <h1>Designer Inputs</h1>
@@ -1476,7 +1404,7 @@
         </div>
 
         <!-- Slide 7: Engineer Inputs -->
-        <div class="slide" data-slide="9">
+        <div class="slide" data-slide="8">
             <div class="slide-content slide-left">
                 <span class="section-number">06</span>
                 <h1>Engineer Inputs</h1>
@@ -1530,7 +1458,7 @@
         </div>
 
         <!-- Slide 8: QA & Leadership Inputs -->
-        <div class="slide" data-slide="10">
+        <div class="slide" data-slide="9">
             <div class="slide-content slide-left">
                 <span class="section-number">07</span>
                 <h1>QA &amp; Leadership Inputs</h1>
@@ -1581,7 +1509,7 @@
         </div>
 
         <!-- Slide 9: Artifact Expectations -->
-        <div class="slide" data-slide="11">
+        <div class="slide" data-slide="10">
             <div class="slide-content slide-left">
                 <span class="section-number">08</span>
                 <h1>Artifact Expectations</h1>
@@ -1615,7 +1543,7 @@
         </div>
 
         <!-- Slide 10: Iteration Speed -->
-        <div class="slide" data-slide="12">
+        <div class="slide" data-slide="11">
             <div class="slide-content slide-left">
                 <span class="section-number">09</span>
                 <h1>Iteration Speed</h1>
@@ -1636,7 +1564,7 @@
         </div>
 
         <!-- Slide 12: Definition of Done -->
-        <div class="slide" data-slide="13">
+        <div class="slide" data-slide="12">
             <div class="slide-content slide-left">
                 <span class="section-number">11</span>
                 <h1>Definition of Done</h1>
@@ -1668,14 +1596,14 @@
         </div>
 
         <!-- Slide 13: Quote -->
-        <div class="slide" data-slide="14">
+        <div class="slide" data-slide="13">
             <div class="slide-content slide-center">
                 <h2 class="quote-text">"Teams no longer operate around a PRD.<br>They operate around a Prototype."</h2>
             </div>
         </div>
 
         <!-- Slide 14: Three Pilot Pods -->
-        <div class="slide" data-slide="15">
+        <div class="slide" data-slide="14">
             <div class="slide-content slide-left">
                 <span class="section-number">12</span>
                 <h1>Three Pilot Pods</h1>
@@ -1722,7 +1650,7 @@
         </div>
 
         <!-- Slide 15: Timeline -->
-        <div class="slide" data-slide="16">
+        <div class="slide" data-slide="15">
             <div class="slide-content slide-left">
                 <span class="section-number">14</span>
                 <h1>Timeline</h1>
@@ -1741,7 +1669,7 @@
         </div>
 
         <!-- Slide 16: What Changes Immediately -->
-        <div class="slide" data-slide="17">
+        <div class="slide" data-slide="16">
             <div class="slide-content slide-left">
                 <span class="section-number">15</span>
                 <h1>What Changes Now</h1>
@@ -1758,7 +1686,7 @@
         </div>
 
         <!-- Slide 16: System Section Header -->
-        <div class="slide" data-slide="18">
+        <div class="slide" data-slide="17">
             <div class="slide-content slide-center">
                 <span class="section-divider">Appendix</span>
                 <h1 class="title-main" style="font-size: 48px;">Pod Execution System</h1>
@@ -1766,7 +1694,7 @@
         </div>
 
         <!-- Slide 17: The Flow (Visual) -->
-        <div class="slide" data-slide="19">
+        <div class="slide" data-slide="18">
             <div class="slide-content slide-left">
                 <span class="section-number">17</span>
                 <h1>The Flow</h1>
@@ -1817,7 +1745,7 @@
         </div>
 
         <!-- Slide 18: Who Drives Each Phase -->
-        <div class="slide" data-slide="20">
+        <div class="slide" data-slide="19">
             <div class="slide-content slide-left">
                 <span class="section-number">18</span>
                 <h1>Who Drives Each Phase</h1>
@@ -1873,7 +1801,7 @@
         </div>
 
         <!-- Slide 19: Iteration Mechanisms -->
-        <div class="slide" data-slide="21">
+        <div class="slide" data-slide="20">
             <div class="slide-content slide-left">
                 <span class="section-number">19</span>
                 <h1>Iteration Mechanisms</h1>
@@ -1935,7 +1863,7 @@
         <!-- Navigation -->
         <div class="nav-bar">
             <div class="slide-counter">
-                <span class="current-slide">01</span> / <span class="total-slides">21</span>
+                <span class="current-slide">01</span> / <span class="total-slides">20</span>
             </div>
             <div class="nav-controls">
                 <button class="nav-btn prev-btn" aria-label="Previous slide">
@@ -1959,6 +1887,49 @@
     </div>
 
     <script src="script.js"></script>
+    <script>
+        function downloadPDF() {
+            // Show all slides for printing
+            const slides = document.querySelectorAll('.slide');
+            const nav = document.querySelector('.nav-bar');
+            nav.style.display = 'none';
+            slides.forEach(s => {
+                s.classList.add('active');
+                s.style.pageBreakAfter = 'always';
+                s.style.position = 'relative';
+                s.style.transform = 'none';
+                s.style.opacity = '1';
+            });
+            window.print();
+            // Restore after print
+            setTimeout(() => {
+                nav.style.display = '';
+                slides.forEach((s, i) => {
+                    if (i > 0) s.classList.remove('active');
+                    s.style.pageBreakAfter = '';
+                    s.style.position = '';
+                    s.style.transform = '';
+                    s.style.opacity = '';
+                });
+            }, 500);
+        }
+    </script>
+    <style>
+        @media print {
+            .nav-bar { display: none !important; }
+            .slideshow-container { height: auto !important; overflow: visible !important; }
+            .slide {
+                display: flex !important;
+                position: relative !important;
+                transform: none !important;
+                opacity: 1 !important;
+                page-break-after: always;
+                min-height: 100vh;
+                width: 100%;
+            }
+            body { background: white; }
+        }
+    </style>
 </body>
 
 </html>
