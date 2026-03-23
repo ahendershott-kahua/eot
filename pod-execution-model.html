@@ -1088,9 +1088,15 @@
         </svg>
     </div>
     <!-- Top-left corner: Draft label + PDF download -->
-    <div style="position:fixed; top:16px; left:20px; z-index:100; display:flex; align-items:center; gap:12px;" class="draft-bar">
-        <span style="font-size:9px; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; color:#1a1a1a;">Current Draft · Mar 22, 2026</span>
-        <a href="pod-execution-model.pdf" download style="text-decoration:none; display:inline-flex; align-items:center; gap:4px; border:1.5px solid #1a1a1a; border-radius:4px; padding:3px 8px; font-size:9px; font-weight:700; color:#1a1a1a; text-transform:uppercase; letter-spacing:0.5px; transition:background 0.2s, color 0.2s;" onmouseover="this.style.background='#1a1a1a';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='#1a1a1a'">↓ PDF</a>
+    <div style="position:fixed; top:16px; left:20px; z-index:100; display:flex; align-items:center; gap:12px;"
+        class="draft-bar">
+        <span
+            style="font-size:9px; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; color:#1a1a1a;">Current
+            Draft · Mar 22, 2026</span>
+        <a href="pod-execution-model.pdf" download
+            style="text-decoration:none; display:inline-flex; align-items:center; gap:4px; border:1.5px solid #1a1a1a; border-radius:4px; padding:3px 8px; font-size:9px; font-weight:700; color:#1a1a1a; text-transform:uppercase; letter-spacing:0.5px; transition:background 0.2s, color 0.2s;"
+            onmouseover="this.style.background='#1a1a1a';this.style.color='#fff'"
+            onmouseout="this.style.background='transparent';this.style.color='#1a1a1a'">↓ PDF</a>
     </div>
     <div class="slideshow-container">
         <!-- Slide 1: Title -->
@@ -1122,7 +1128,8 @@
             <div class="slide-content slide-left">
                 <span class="section-number">02</span>
                 <h1>Why Pods Exist</h1>
-                <p class="subtitle">Pods compress delivery from months to weeks by replacing spec-driven work with prototype-first iteration.</p>
+                <p class="subtitle">Pods compress delivery from months to weeks by replacing spec-driven work with
+                    prototype-first iteration.</p>
                 <ul class="bullet-list">
                     <li>Small cross-functional strike teams</li>
                     <li>Prototype first, not spec first</li>
@@ -1139,47 +1146,63 @@
         <div class="slide" data-slide="3">
             <div class="slide-content slide-left">
                 <h1 style="margin-bottom:4px;">Continuous Iteration</h1>
-                <p class="subtitle" style="margin-bottom:24px;">Every delivery strengthens the next. The system learns as it runs.</p>
+                <p class="subtitle" style="margin-bottom:24px;">Every delivery strengthens the next. The system learns
+                    as it runs.</p>
 
                 <div style="display:grid; grid-template-columns:1fr 1fr; gap:32px; align-items:center;">
                     <!-- Left: Animated orbiting circles (3 circles) -->
                     <div style="display:flex; align-items:center; justify-content:center;">
-                        <svg width="420" height="380" viewBox="0 0 420 380" xmlns="http://www.w3.org/2000/svg" style="overflow:visible;">
+                        <svg width="420" height="380" viewBox="0 0 420 380" xmlns="http://www.w3.org/2000/svg"
+                            style="overflow:visible;">
                             <g style="transform-origin:210px 190px; animation:orbit1 20s linear infinite;">
-                                <circle cx="130" cy="140" r="110" fill="none" stroke="#00809B" stroke-width="2.5"/>
+                                <circle cx="130" cy="140" r="110" fill="none" stroke="#00809B" stroke-width="2.5" />
                             </g>
                             <g style="transform-origin:210px 190px; animation:orbit2 25s linear infinite reverse;">
-                                <circle cx="290" cy="190" r="110" fill="none" stroke="#e9001f" stroke-width="2.5" stroke-dasharray="6 4"/>
+                                <circle cx="290" cy="190" r="110" fill="none" stroke="#e9001f" stroke-width="2.5"
+                                    stroke-dasharray="6 4" />
                             </g>
                             <g style="transform-origin:210px 190px; animation:orbit3 30s linear infinite;">
-                                <circle cx="170" cy="270" r="110" fill="none" stroke="#FF991D" stroke-width="2.5"/>
+                                <circle cx="170" cy="270" r="110" fill="none" stroke="#FF991D" stroke-width="2.5" />
                             </g>
-                            <circle cx="210" cy="190" r="6" fill="#00809B"/>
+                            <circle cx="210" cy="190" r="6" fill="#00809B" />
                         </svg>
                     </div>
 
                     <!-- Right: Phase details (3 phases) -->
                     <div style="display:flex; flex-direction:column; gap:18px;">
                         <div style="border-left:4px solid #00809B; padding-left:14px;">
-                            <div style="font-size:14px; font-weight:800; color:#00809B; margin-bottom:4px;">01 Discover</div>
-                            <div style="font-size:11px; color:#555; line-height:1.7;">
-                                Synthesize stakeholder signals, system context, and competitive inputs to define a differentiated solution direction.
+                            <div style="font-size:14px; font-weight:800; color:#00809B; margin-bottom:4px;">01 Discover
                             </div>
-                            <div style="font-size:9px; font-weight:700; text-transform:uppercase; color:#00809B; margin-top:6px; padding-top:4px; border-top:1px solid #e0e0e0;">Deliverable: Signed-off PRD + prompt package</div>
+                            <div style="font-size:11px; color:#555; line-height:1.7;">
+                                Synthesize stakeholder signals, system context, and competitive inputs to define a
+                                differentiated solution direction.
+                            </div>
+                            <div
+                                style="font-size:9px; font-weight:700; text-transform:uppercase; color:#00809B; margin-top:6px; padding-top:4px; border-top:1px solid #e0e0e0;">
+                                Deliverable: Signed-off PRD + prompt package</div>
                         </div>
                         <div style="border-left:4px solid #e9001f; padding-left:14px;">
-                            <div style="font-size:14px; font-weight:800; color:#e9001f; margin-bottom:4px;">02 Iterate</div>
-                            <div style="font-size:11px; color:#555; line-height:1.7;">
-                                Iterate through working Canvas-driven prototypes with same-day feedback and pre-code stakeholder alignment. Then build, integrate, and continuously test against acceptance criteria.
+                            <div style="font-size:14px; font-weight:800; color:#e9001f; margin-bottom:4px;">02 Iterate
                             </div>
-                            <div style="font-size:9px; font-weight:700; text-transform:uppercase; color:#e9001f; margin-top:6px; padding-top:4px; border-top:1px solid #e0e0e0;">Deliverable: Validated prototype + working build in staging</div>
+                            <div style="font-size:11px; color:#555; line-height:1.7;">
+                                Iterate through working Canvas-driven prototypes with same-day feedback and pre-code
+                                stakeholder alignment. Then build, integrate, and continuously test against acceptance
+                                criteria.
+                            </div>
+                            <div
+                                style="font-size:9px; font-weight:700; text-transform:uppercase; color:#e9001f; margin-top:6px; padding-top:4px; border-top:1px solid #e0e0e0;">
+                                Deliverable: Validated prototype + working build in staging</div>
                         </div>
                         <div style="border-left:4px solid #FF991D; padding-left:14px;">
-                            <div style="font-size:14px; font-weight:800; color:#FF991D; margin-bottom:4px;">03 Launch</div>
-                            <div style="font-size:11px; color:#555; line-height:1.7;">
-                                Ship to production users, run retrospective, capture learnings, and feed evidence back into the next Discover cycle.
+                            <div style="font-size:14px; font-weight:800; color:#FF991D; margin-bottom:4px;">03 Launch
                             </div>
-                            <div style="font-size:9px; font-weight:700; text-transform:uppercase; color:#FF991D; margin-top:6px; padding-top:4px; border-top:1px solid #e0e0e0;">Deliverable: Release + retro intelligence report</div>
+                            <div style="font-size:11px; color:#555; line-height:1.7;">
+                                Ship to production users, run retrospective, capture learnings, and feed evidence back
+                                into the next Discover cycle.
+                            </div>
+                            <div
+                                style="font-size:9px; font-weight:700; text-transform:uppercase; color:#FF991D; margin-top:6px; padding-top:4px; border-top:1px solid #e0e0e0;">
+                                Deliverable: Release + retro intelligence report</div>
                         </div>
                     </div>
                 </div>
@@ -1248,7 +1271,8 @@
                                 stroke-linecap="round" stroke-linejoin="round">
                                 <circle cx="12" cy="12" r="10" />
                                 <line x1="2" y1="12" x2="22" y2="12" />
-                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                                <path
+                                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
                             </svg></span>
                         Host
                     </span>
@@ -1273,7 +1297,8 @@
             <div class="slide-content slide-left">
                 <span class="section-number">05</span>
                 <h1>Inputs Replace Deliverables</h1>
-                <p class="subtitle">The old model passed documents between roles. The new model uses AI to generate working inputs into a shared prototype.</p>
+                <p class="subtitle">The old model passed documents between roles. The new model uses AI to generate
+                    working inputs into a shared prototype.</p>
                 <div class="two-col">
                     <div class="not-allowed-col">
                         <h3>The Old Way</h3>
@@ -1291,7 +1316,8 @@
                                 or build</li>
                             <li>PM drafts the problem frame AND builds a clickable prototype</li>
                             <li>Designer drafts the PRD AND ships working HTML</li>
-                            <li>Engineer scaffolds the app while QA agents, kAutomate, and automation generate structured validation coverage</li>
+                            <li>Engineer scaffolds the app while QA agents, kAutomate, and automation generate
+                                structured validation coverage</li>
                             <li>No handoffs. Everyone contributes everywhere.</li>
                         </ul>
                     </div>
@@ -1307,7 +1333,8 @@
             <div class="slide-content slide-left">
                 <span class="section-number">06</span>
                 <h1>Industry Inputs</h1>
-                <p class="subtitle">Feed AI all available context: customer signals, competitive products, internal presentations, articles, and domain expertise. No multi-week spec cycles.</p>
+                <p class="subtitle">Feed AI all available context: customer signals, competitive products, internal
+                    presentations, articles, and domain expertise. No multi-week spec cycles.</p>
                 <div class="role-grid">
                     <div class="role-card">
                         <h3>Gather Context</h3>
@@ -1349,7 +1376,8 @@
                     </div>
                 </div>
                 <blockquote class="callout">
-                    What used to take weeks of manual synthesis now takes a morning with AI. Gather context, draft the PRD, move on.
+                    What used to take weeks of manual synthesis now takes a morning with AI. Gather context, draft the
+                    PRD, move on.
                 </blockquote>
             </div>
         </div>
@@ -1359,8 +1387,7 @@
             <div class="slide-content slide-left">
                 <span class="section-number">07</span>
                 <h1>Designer Inputs</h1>
-                <p class="subtitle">Skip Figma. Open VS Code + an approved model. Build clickable prototypes in hours,
-                    not weeks.</p>
+                <p class="subtitle">UIUX accelerates refinement after a working iteration, not by defining pixel-perfect specs upfront. Open VS Code + an approved model. Build clickable prototypes in hours, not weeks.</p>
                 <div class="role-grid">
                     <div class="role-card">
                         <h3>Shape the Brief</h3>
@@ -1378,7 +1405,7 @@
                         <h3>Build in Code</h3>
                         <ul>
                             <li>Open VS Code + an approved model. Describe the UI in plain language</li>
-                            <li>Full page with states, navigation, real copy. Working HTML, not static mockups</li>
+                            <li>Full page with states, navigation, real copy. Working prototype, not static mockups</li>
                             <li>Output: clickable prototype the pod can test same day</li>
                         </ul>
                         <div class="tool-row">
@@ -1664,7 +1691,8 @@
                         Confirm all three pod rosters</li>
                     <li><strong>Next Week:</strong> Education and alignment meeting with everyone in all three pods.
                         Calendar pod kicks off immediately after</li>
-                    <li><strong>As Fast As Possible:</strong> Calendar pod ships working product. Model validated. Team can
+                    <li><strong>As Fast As Possible:</strong> Calendar pod ships working product. Model validated. Team
+                        can
                         articulate what inputs are actually needed</li>
                     <li><strong>After May Release:</strong> Pod model rolls out org-wide. Calendar pod becomes the
                         template every new team follows</li>
@@ -1707,38 +1735,63 @@
                 <!-- Integrated flow: chevrons + details as one visual -->
                 <div style="margin-top:48px;">
                     <div class="flow-diagram">
-                        <div class="flow-chevron" style="background: #00809B;"><div class="flow-chevron-inner">Discover</div></div>
-                        <div class="flow-chevron" style="background: #e9001f;"><div class="flow-chevron-inner">Prototype</div></div>
-                        <div class="flow-chevron" style="background: #219300;"><div class="flow-chevron-inner">Build</div></div>
-                        <div class="flow-chevron" style="background: #FF991D;"><div class="flow-chevron-inner">Launch</div></div>
+                        <div class="flow-chevron" style="background: #00809B;">
+                            <div class="flow-chevron-inner">Discover</div>
+                        </div>
+                        <div class="flow-chevron" style="background: #e9001f;">
+                            <div class="flow-chevron-inner">Prototype</div>
+                        </div>
+                        <div class="flow-chevron" style="background: #219300;">
+                            <div class="flow-chevron-inner">Build</div>
+                        </div>
+                        <div class="flow-chevron" style="background: #FF991D;">
+                            <div class="flow-chevron-inner">Launch</div>
+                        </div>
                     </div>
 
                     <!-- Phase descriptions aligned under chevrons -->
                     <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:0; margin-top:16px;">
                         <div style="padding-right:14px;">
-                            <div style="font-size:13px; font-weight:700; color:#1a1a1a; margin-bottom:4px;">Understand the problem</div>
-                            <div style="font-size:11px; color:#888; line-height:1.5;">Stakeholder input, context synthesis, scope definition</div>
+                            <div style="font-size:13px; font-weight:700; color:#1a1a1a; margin-bottom:4px;">Understand
+                                the problem</div>
+                            <div style="font-size:11px; color:#888; line-height:1.5;">Stakeholder input, context
+                                synthesis, scope definition</div>
                         </div>
                         <div style="padding:0 14px;">
-                            <div style="font-size:13px; font-weight:700; color:#1a1a1a; margin-bottom:4px;">Validate the solution</div>
-                            <div style="font-size:11px; color:#888; line-height:1.5;">Clickable prototype, user feedback, stakeholder approval</div>
+                            <div style="font-size:13px; font-weight:700; color:#1a1a1a; margin-bottom:4px;">Validate the
+                                solution</div>
+                            <div style="font-size:11px; color:#888; line-height:1.5;">Clickable prototype, user
+                                feedback, stakeholder approval</div>
                         </div>
                         <div style="padding:0 14px;">
-                            <div style="font-size:13px; font-weight:700; color:#1a1a1a; margin-bottom:4px;">Engineer the product</div>
-                            <div style="font-size:11px; color:#888; line-height:1.5;">Core flow end-to-end, API integration, continuous testing</div>
+                            <div style="font-size:13px; font-weight:700; color:#1a1a1a; margin-bottom:4px;">Engineer the
+                                product</div>
+                            <div style="font-size:11px; color:#888; line-height:1.5;">Core flow end-to-end, API
+                                integration, continuous testing</div>
                         </div>
                         <div style="padding-left:14px;">
-                            <div style="font-size:13px; font-weight:700; color:#1a1a1a; margin-bottom:4px;">Ship and learn</div>
-                            <div style="font-size:11px; color:#888; line-height:1.5;">Regression, deploy, capture learnings, feed next cycle</div>
+                            <div style="font-size:13px; font-weight:700; color:#1a1a1a; margin-bottom:4px;">Ship and
+                                learn</div>
+                            <div style="font-size:11px; color:#888; line-height:1.5;">Regression, deploy, capture
+                                learnings, feed next cycle</div>
                         </div>
                     </div>
 
                     <!-- Output row -->
-                    <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:0; margin-top:12px; padding-top:10px; border-top:1px solid #eee;">
-                        <div style="font-size:10px; font-weight:600; text-transform:uppercase; letter-spacing:0.5px; color:#00809B; padding-right:14px;">Output: Signed-off PRD →</div>
-                        <div style="font-size:10px; font-weight:600; text-transform:uppercase; letter-spacing:0.5px; color:#e9001f; padding:0 14px;">Output: Approved Prototype →</div>
-                        <div style="font-size:10px; font-weight:600; text-transform:uppercase; letter-spacing:0.5px; color:#219300; padding:0 14px;">Output: Working Build →</div>
-                        <div style="font-size:10px; font-weight:600; text-transform:uppercase; letter-spacing:0.5px; color:#FF991D; padding-left:14px;">Output: Release + Retro ●</div>
+                    <div
+                        style="display:grid; grid-template-columns:repeat(4,1fr); gap:0; margin-top:12px; padding-top:10px; border-top:1px solid #eee;">
+                        <div
+                            style="font-size:10px; font-weight:600; text-transform:uppercase; letter-spacing:0.5px; color:#00809B; padding-right:14px;">
+                            Output: Signed-off PRD →</div>
+                        <div
+                            style="font-size:10px; font-weight:600; text-transform:uppercase; letter-spacing:0.5px; color:#e9001f; padding:0 14px;">
+                            Output: Approved Prototype →</div>
+                        <div
+                            style="font-size:10px; font-weight:600; text-transform:uppercase; letter-spacing:0.5px; color:#219300; padding:0 14px;">
+                            Output: Working Build →</div>
+                        <div
+                            style="font-size:10px; font-weight:600; text-transform:uppercase; letter-spacing:0.5px; color:#FF991D; padding-left:14px;">
+                            Output: Release + Retro ●</div>
                     </div>
                 </div>
 
@@ -1753,7 +1806,8 @@
             <div class="slide-content slide-left">
                 <span class="section-number">19</span>
                 <h1>Who Drives Each Phase</h1>
-                <p class="subtitle">Every role is engaged every phase. Bold = peak ownership. The flow, not the calendar, determines who leads.</p>
+                <p class="subtitle">Every role is engaged every phase. Bold = peak ownership. The flow, not the
+                    calendar, determines who leads.</p>
                 <div class="phase-swimlane">
                     <div class="phase-header">
                         <span></span>
@@ -1799,7 +1853,8 @@
                     </div>
                 </div>
                 <blockquote class="callout" style="margin-top: 16px;">
-                    This is not waterfall. Roles overlap. Phases compress. The grid shows peak ownership, not sequential handoffs.
+                    This is not waterfall. Roles overlap. Phases compress. The grid shows peak ownership, not sequential
+                    handoffs.
                 </blockquote>
             </div>
         </div>
@@ -1814,10 +1869,18 @@
                 <!-- Segmented cycle bar -->
                 <div style="margin-top:40px;">
                     <div style="display:flex; margin-bottom:6px;">
-                        <div style="flex:1; font-size:12px; font-weight:700; color:#219300; text-transform:uppercase; letter-spacing:1px;">Ship</div>
-                        <div style="flex:1; font-size:12px; font-weight:700; color:#00809B; text-transform:uppercase; letter-spacing:1px;">Learn</div>
-                        <div style="flex:1; font-size:12px; font-weight:700; color:#e9001f; text-transform:uppercase; letter-spacing:1px;">Adjust</div>
-                        <div style="flex:1; font-size:12px; font-weight:700; color:#FF991D; text-transform:uppercase; letter-spacing:1px;">Repeat</div>
+                        <div
+                            style="flex:1; font-size:12px; font-weight:700; color:#219300; text-transform:uppercase; letter-spacing:1px;">
+                            Ship</div>
+                        <div
+                            style="flex:1; font-size:12px; font-weight:700; color:#00809B; text-transform:uppercase; letter-spacing:1px;">
+                            Learn</div>
+                        <div
+                            style="flex:1; font-size:12px; font-weight:700; color:#e9001f; text-transform:uppercase; letter-spacing:1px;">
+                            Adjust</div>
+                        <div
+                            style="flex:1; font-size:12px; font-weight:700; color:#FF991D; text-transform:uppercase; letter-spacing:1px;">
+                            Repeat</div>
                     </div>
                     <div style="display:flex; height:28px; border-radius:4px; overflow:hidden;">
                         <div style="flex:1; background:#219300;"></div>
@@ -1834,27 +1897,38 @@
 
                     <!-- Loop-back arrow -->
                     <div style="position:relative; height:36px; margin-top:4px;">
-                        <svg width="100%" height="36" viewBox="0 0 800 36" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M760 4 L760 20 Q760 28 752 28 L48 28 Q40 28 40 20 L40 14" stroke="#00809B" stroke-width="2" fill="none" stroke-dasharray="4 3"/>
-                            <polygon points="36,18 40,8 44,18" fill="#00809B"/>
+                        <svg width="100%" height="36" viewBox="0 0 800 36" preserveAspectRatio="none" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M760 4 L760 20 Q760 28 752 28 L48 28 Q40 28 40 20 L40 14" stroke="#00809B"
+                                stroke-width="2" fill="none" stroke-dasharray="4 3" />
+                            <polygon points="36,18 40,8 44,18" fill="#00809B" />
                         </svg>
                     </div>
-                    <div style="text-align:center; font-size:10px; font-weight:600; color:#00809B; text-transform:uppercase; letter-spacing:1.5px; margin-top:-4px;">Continuous cycle</div>
+                    <div
+                        style="text-align:center; font-size:10px; font-weight:600; color:#00809B; text-transform:uppercase; letter-spacing:1.5px; margin-top:-4px;">
+                        Continuous cycle</div>
                 </div>
 
                 <!-- Three outcomes -->
-                <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:0; margin-top:32px; border-top:2px solid #1a1a1a; padding-top:16px;">
+                <div
+                    style="display:grid; grid-template-columns:repeat(3,1fr); gap:0; margin-top:32px; border-top:2px solid #1a1a1a; padding-top:16px;">
                     <div style="padding-right:16px;">
-                        <div style="font-size:13px; font-weight:700; color:#1a1a1a; margin-bottom:4px;">After every release</div>
-                        <div style="font-size:12px; color:#777; line-height:1.5;">Retro within 48 hours. What shipped, what slipped, what we learned.</div>
+                        <div style="font-size:13px; font-weight:700; color:#1a1a1a; margin-bottom:4px;">After every
+                            release</div>
+                        <div style="font-size:12px; color:#777; line-height:1.5;">Retro within 48 hours. What shipped,
+                            what slipped, what we learned.</div>
                     </div>
                     <div style="padding:0 16px; border-left:1px solid #e0e0e0;">
-                        <div style="font-size:13px; font-weight:700; color:#1a1a1a; margin-bottom:4px;">Continuous feedback</div>
-                        <div style="font-size:12px; color:#777; line-height:1.5;">Usage data flows directly into the next cycle. No separate research sprint.</div>
+                        <div style="font-size:13px; font-weight:700; color:#1a1a1a; margin-bottom:4px;">Continuous
+                            feedback</div>
+                        <div style="font-size:12px; color:#777; line-height:1.5;">Usage data flows directly into the
+                            next cycle. No separate research sprint.</div>
                     </div>
                     <div style="padding-left:16px; border-left:1px solid #e0e0e0;">
-                        <div style="font-size:13px; font-weight:700; color:#1a1a1a; margin-bottom:4px;">Compounding speed</div>
-                        <div style="font-size:12px; color:#777; line-height:1.5;">Patterns become reusable. The pod gets faster. Each cycle builds on the last.</div>
+                        <div style="font-size:13px; font-weight:700; color:#1a1a1a; margin-bottom:4px;">Compounding
+                            speed</div>
+                        <div style="font-size:12px; color:#777; line-height:1.5;">Patterns become reusable. The pod gets
+                            faster. Each cycle builds on the last.</div>
                     </div>
                 </div>
 
@@ -1920,8 +1994,15 @@
     </script>
     <style>
         @media print {
-            .nav-bar { display: none !important; }
-            .slideshow-container { height: auto !important; overflow: visible !important; }
+            .nav-bar {
+                display: none !important;
+            }
+
+            .slideshow-container {
+                height: auto !important;
+                overflow: visible !important;
+            }
+
             .slide {
                 display: flex !important;
                 position: relative !important;
@@ -1931,7 +2012,10 @@
                 min-height: 100vh;
                 width: 100%;
             }
-            body { background: white; }
+
+            body {
+                background: white;
+            }
         }
     </style>
 </body>
