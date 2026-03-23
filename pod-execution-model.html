@@ -1933,10 +1933,148 @@
             </div>
         </div>
 
+        <!-- APPENDIX: Old Way vs New Way by Role -->
+
+        <!-- Slide 21: PM Old vs New -->
+        <div class="slide" data-slide="21">
+            <div class="slide-content slide-left">
+                <span class="section-number">A1</span>
+                <h1>PM: Old Way vs New Way</h1>
+                <p class="subtitle">From spec author to decision scientist. The PM's value is judgment, not documentation.</p>
+                <div class="two-col">
+                    <div class="not-allowed-col">
+                        <h3>The Old Way</h3>
+                        <ul>
+                            <li>Spends weeks writing detailed PRDs before anyone builds</li>
+                            <li>Gathers requirements through meetings and documents them in slides</li>
+                            <li>Hands finished spec to design, waits for mockups, hands to engineering</li>
+                            <li>Success measured by spec completeness, not product learning</li>
+                            <li>Manages timelines and Jira tickets, not outcomes</li>
+                        </ul>
+                    </div>
+                    <div class="allowed-col">
+                        <h3>The New Way</h3>
+                        <ul>
+                            <li>Defines problem frame inside a live prototype on day one</li>
+                            <li>Feeds stakeholder signals, competitive context, and customer data directly into AI to synthesize direction</li>
+                            <li>Builds a working clickable prototype same day using Canvas and approved models</li>
+                            <li>Validates assumptions through real user interaction, not spec review</li>
+                            <li>Operates as a decision scientist: chooses which problems to solve, not how to document them</li>
+                        </ul>
+                    </div>
+                </div>
+                <blockquote class="callout">
+                    The PM who ships a prototype on Monday learns more than the PM who ships a PRD on Friday.
+                </blockquote>
+            </div>
+        </div>
+
+        <!-- Slide 22: Designer Old vs New -->
+        <div class="slide" data-slide="22">
+            <div class="slide-content slide-left">
+                <span class="section-number">A2</span>
+                <h1>Designer: Old Way vs New Way</h1>
+                <p class="subtitle">From pixel pusher to creative director of AI output. Design accelerates iteration, not precedes it.</p>
+                <div class="two-col">
+                    <div class="not-allowed-col">
+                        <h3>The Old Way</h3>
+                        <ul>
+                            <li>Spends weeks in Figma creating pixel-perfect mockups nobody has tested</li>
+                            <li>Delivers static screens with redline annotations for engineering to interpret</li>
+                            <li>Design-to-code handoff creates translation loss and rework cycles</li>
+                            <li>Feedback happens in comments on static files, disconnected from real behavior</li>
+                            <li>Waits for PRD before starting any visual work</li>
+                        </ul>
+                    </div>
+                    <div class="allowed-col">
+                        <h3>The New Way</h3>
+                        <ul>
+                            <li>Opens VS Code + an approved model and describes UI in plain language</li>
+                            <li>Produces working interactive prototypes in hours, testing real states and navigation</li>
+                            <li>Directs and curates AI-generated output like a creative director, not a production artist</li>
+                            <li>Iterates live alongside engineering in the same codebase, no handoff</li>
+                            <li>Refines after a working iteration exists, not before one is built</li>
+                        </ul>
+                    </div>
+                </div>
+                <blockquote class="callout">
+                    A designer with an AI pair can produce what used to take a team of three two weeks, in a single afternoon.
+                </blockquote>
+            </div>
+        </div>
+
+        <!-- Slide 23: Engineer Old vs New -->
+        <div class="slide" data-slide="23">
+            <div class="slide-content slide-left">
+                <span class="section-number">A3</span>
+                <h1>Engineer: Old Way vs New Way</h1>
+                <p class="subtitle">From line-by-line coder to AI orchestrator. The engineer's value is architecture and judgment, not keystrokes.</p>
+                <div class="two-col">
+                    <div class="not-allowed-col">
+                        <h3>The Old Way</h3>
+                        <ul>
+                            <li>Waits for spec and mockups before writing a single line of code</li>
+                            <li>Builds from scratch, manually writing boilerplate, tests, and API contracts</li>
+                            <li>Sprints measured by story points and velocity, not working product</li>
+                            <li>Code review is the only quality gate, happens after completion</li>
+                            <li>Integration and deployment are separate phases with separate teams</li>
+                        </ul>
+                    </div>
+                    <div class="allowed-col">
+                        <h3>The New Way</h3>
+                        <ul>
+                            <li>Takes prototype from PM/Designer and scaffolds production code from patterns on day one</li>
+                            <li>Uses AI as a pair partner: generates tests, API contracts, data models, and component variations</li>
+                            <li>Primary user flow running end-to-end in the real app within 48 hours</li>
+                            <li>Continuous feedback replaces translation cycles. Iteration happens in minutes, not sprints</li>
+                            <li>Owns architecture, integration surfaces, and deployment from day one with CI, env config, and feature flags</li>
+                        </ul>
+                    </div>
+                </div>
+                <blockquote class="callout">
+                    The engineer who directs AI and ships in days outpaces the team that hand-codes for weeks.
+                </blockquote>
+            </div>
+        </div>
+
+        <!-- Slide 24: QA Old vs New -->
+        <div class="slide" data-slide="24">
+            <div class="slide-content slide-left">
+                <span class="section-number">A4</span>
+                <h1>QA: Old Way vs New Way</h1>
+                <p class="subtitle">From post-delivery gatekeeper to embedded quality partner. Validation is continuous, not sequential.</p>
+                <div class="two-col">
+                    <div class="not-allowed-col">
+                        <h3>The Old Way</h3>
+                        <ul>
+                            <li>Tests after engineering declares "done." Finds bugs after context is lost</li>
+                            <li>Writes manual test plans from static specifications</li>
+                            <li>QA is a phase: gated, scheduled, and siloed from development</li>
+                            <li>Regression testing is manual, slow, and incomplete</li>
+                            <li>"Hand off to QA" creates adversarial dynamic and delays release</li>
+                        </ul>
+                    </div>
+                    <div class="allowed-col">
+                        <h3>The New Way</h3>
+                        <ul>
+                            <li>Joins at pod kickoff. Tests the first prototype on day one</li>
+                            <li>QA agents, kAutomate, and AI generate test scenarios, edge cases, and regression checklists continuously</li>
+                            <li>Everyone is QA: PM validates assumptions, Designer tests interactions, Engineer generates automated tests</li>
+                            <li>Validates on working prototypes, not specifications. Bugs caught in context, not after handoff</li>
+                            <li>QA supports pods and accelerates release, never gates it</li>
+                        </ul>
+                    </div>
+                </div>
+                <blockquote class="callout">
+                    There is no "hand off to QA." QA is already there. Validation is continuous, not a checkpoint.
+                </blockquote>
+            </div>
+        </div>
+
         <!-- Navigation -->
         <div class="nav-bar">
             <div class="slide-counter">
-                <span class="current-slide">01</span> / <span class="total-slides">20</span>
+                <span class="current-slide">01</span> / <span class="total-slides">24</span>
             </div>
             <div class="nav-controls">
                 <button class="nav-btn prev-btn" aria-label="Previous slide">
