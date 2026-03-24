@@ -1102,7 +1102,8 @@
         <!-- Slide 1: Title -->
         <div class="slide active" data-slide="1">
             <div class="slide-content slide-center" style="position:relative; justify-content:center;">
-                <div id="title-circles" style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); z-index:0;">
+                <div id="title-circles"
+                    style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); z-index:0;">
                     <svg width="576" height="528" viewBox="0 0 420 380" xmlns="http://www.w3.org/2000/svg"
                         style="overflow:visible;">
                         <g style="transform-origin:210px 190px; animation:orbit1 20s linear infinite;">
@@ -1119,14 +1120,14 @@
                     </svg>
                 </div>
                 <script>
-                    setTimeout(function() {
+                    setTimeout(function () {
                         var el = document.getElementById('title-circles');
                         if (el) {
                             el.style.transition = 'opacity 0.6s ease';
                             el.style.opacity = '0';
-                            setTimeout(function() {
+                            setTimeout(function () {
                                 var gs = el.querySelectorAll('g');
-                                gs.forEach(function(g) {
+                                gs.forEach(function (g) {
                                     g.style.animation = 'none';
                                     g.style.transform = 'none';
                                 });
@@ -1135,8 +1136,7 @@
                         }
                     }, 5000);
                 </script>
-                <div
-                    style="position:relative; z-index:1;">
+                <div style="position:relative; z-index:1;">
                     <h1 class="title-main">Pod Execution Model</h1>
                     <p class="subtitle-main"
                         style="background: rgba(255,255,255,0.85); display:inline; padding: 4px 12px; border-radius: 6px;">
@@ -1585,7 +1585,7 @@
         <div class="slide" data-slide="11">
             <div class="slide-content slide-left" style="position:relative;">
                 <div style="text-align:center;">
-                    <span class="section-number" style="display:block;">10b</span>
+                    <span class="section-number" style="display:block;">11</span>
                     <h1 style="font-size:clamp(24px,3vw,36px); margin-bottom:4px;">Rapid Project Plan</h1>
                     <p class="subtitle">Subject to change. Final iteration in progress</p>
                 </div>
@@ -1779,7 +1779,7 @@
         <div class="slide" data-slide="15">
             <div class="slide-content slide-left">
                 <span class="section-number">15</span>
-                <h1>Canvas Pod · Case Study</h1>
+                <h1>Canvas Pod: Case Study</h1>
                 <p class="subtitle">The first pod that proved the model. Canvas shipped as a real product using the
                     execution framework before it was formalized.</p>
 
@@ -1824,10 +1824,66 @@
             </div>
         </div>
 
-        <!-- Slide 14: Three Pilot Pods -->
+        <!-- Slide: kCapture Pod Case Study -->
         <div class="slide" data-slide="16">
             <div class="slide-content slide-left">
                 <span class="section-number">16</span>
+                <h1>kCapture Pod: Case Study</h1>
+                <p class="subtitle">Location-based 360 capture validation. Proving the pod model works for field-first,
+                    hardware-adjacent workflows.</p>
+
+                <div style="margin-top:24px;">
+                    <div
+                        style="font-size:9px; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; color:#00809B; margin-bottom:10px;">
+                        Pod Composition</div>
+                    <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                        <div
+                            style="display:flex; align-items:center; gap:6px; padding:8px 16px; border-radius:8px; border:2px solid #1a1a1a; background:white;">
+                            <span style="font-size:13px; font-weight:700; color:#1a1a1a;">Bridgette</span>
+                            <span style="font-size:10px; color:#888;">Engineer</span>
+                        </div>
+                        <div
+                            style="display:flex; align-items:center; gap:6px; padding:8px 16px; border-radius:8px; border:2px solid #1a1a1a; background:white;">
+                            <span style="font-size:13px; font-weight:700; color:#1a1a1a;">ProCon</span>
+                            <span style="font-size:10px; color:#888;">Champion</span>
+                        </div>
+                        <div
+                            style="display:flex; align-items:center; gap:6px; padding:8px 16px; border-radius:8px; border:1px dashed #ccc; background:#f8f8f8;">
+                            <span style="font-size:13px; font-weight:600; color:#666;">UX</span>
+                            <span style="font-size:10px; color:#888;">Advisor</span>
+                        </div>
+                        <div
+                            style="display:flex; align-items:center; gap:6px; padding:8px 16px; border-radius:8px; border:1px dashed #ccc; background:#f8f8f8;">
+                            <span style="font-size:13px; font-weight:600; color:#666;">QA</span>
+                            <span style="font-size:10px; color:#888;">Advisor</span>
+                        </div>
+                    </div>
+                    <p style="font-size:11px; color:#888; margin-top:8px; font-style:italic;">UX transitioned from
+                        prototype lead to advisory role. UX and QA advise Champion &amp; Engineer directly.</p>
+                </div>
+
+                <div style="margin-top:24px;">
+                    <div
+                        style="font-size:9px; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; color:#888; margin-bottom:10px;">
+                        What It's Proving</div>
+                    <ul class="bullet-list" style="margin:0;">
+                        <li>Repeatable location-based capture without training</li>
+                        <li>Media attaches correctly to floor plan pins every time</li>
+                        <li>Location history clearly communicates change over time</li>
+                        <li>Workflow scales from one tester to field teams</li>
+                    </ul>
+                </div>
+
+                <blockquote class="callout" style="margin-top:24px;">
+                    Capture first. History second. Scale later.
+                </blockquote>
+            </div>
+        </div>
+
+        <!-- Slide 14: Three Pilot Pods -->
+        <div class="slide" data-slide="17">
+            <div class="slide-content slide-left">
+                <span class="section-number">17</span>
                 <h1>Three Pilot Pods</h1>
                 <p class="subtitle">One execution model. Three proving environments. Each validates a different adoption
                     surface.</p>
@@ -1894,9 +1950,9 @@
         </div>
 
         <!-- Slide 15: Timeline -->
-        <div class="slide" data-slide="17">
+        <div class="slide" data-slide="18">
             <div class="slide-content slide-left">
-                <span class="section-number">17</span>
+                <span class="section-number">18</span>
                 <h1>Timeline</h1>
                 <p class="subtitle">Definition to deployment in rapid cycles. Calendar is the pilot.</p>
                 <ul class="bullet-list">
@@ -1914,9 +1970,9 @@
         </div>
 
         <!-- Slide 16: What Changes Immediately -->
-        <div class="slide" data-slide="18">
+        <div class="slide" data-slide="19">
             <div class="slide-content slide-left">
-                <span class="section-number">18</span>
+                <span class="section-number">19</span>
                 <h1>What Changes Now</h1>
                 <p class="subtitle">Concrete behavior shifts starting immediately.</p>
                 <ul class="change-list">
@@ -1933,7 +1989,7 @@
         </div>
 
         <!-- Slide 16: System Section Header -->
-        <div class="slide" data-slide="19">
+        <div class="slide" data-slide="20">
             <div class="slide-content slide-center">
                 <span class="section-divider">Appendix</span>
                 <h1 class="title-main" style="font-size: 48px;">Pod Execution System</h1>
@@ -1941,9 +1997,9 @@
         </div>
 
         <!-- Slide 17: The Flow (Visual) -->
-        <div class="slide" data-slide="20">
+        <div class="slide" data-slide="21">
             <div class="slide-content slide-left">
-                <span class="section-number">20</span>
+                <span class="section-number">21</span>
                 <h1>The Flow</h1>
                 <p class="subtitle">From problem to product. Four phases. No fixed timeline. Scale to fit.</p>
 
@@ -2019,9 +2075,9 @@
         </div>
 
         <!-- Slide 18: Who Drives Each Phase -->
-        <div class="slide" data-slide="21">
+        <div class="slide" data-slide="22">
             <div class="slide-content slide-left">
-                <span class="section-number">21</span>
+                <span class="section-number">22</span>
                 <h1>Who Drives Each Phase</h1>
                 <p class="subtitle">Engineer and Champion are constant. All other roles participate as needed.</p>
                 <div class="phase-swimlane">
@@ -2077,9 +2133,9 @@
         </div>
 
         <!-- Slide 19: Iteration Mechanisms -->
-        <div class="slide" data-slide="22">
+        <div class="slide" data-slide="23">
             <div class="slide-content slide-left">
-                <span class="section-number">22</span>
+                <span class="section-number">23</span>
                 <h1>Iteration Mechanisms</h1>
                 <p class="subtitle">The system doesn't end at launch. Every cycle feeds the next.</p>
 
@@ -2158,9 +2214,9 @@
         <!-- APPENDIX: Old Way vs New Way by Role -->
 
         <!-- Slide 21: PM Old vs New -->
-        <div class="slide" data-slide="23">
+        <div class="slide" data-slide="24">
             <div class="slide-content slide-left">
-                <span class="section-number">23</span>
+                <span class="section-number">24</span>
                 <h1>PM: Old Way vs New Way</h1>
                 <p class="subtitle">From spec author to decision scientist. The PM's value is judgment, not
                     documentation.</p>
@@ -2195,9 +2251,9 @@
         </div>
 
         <!-- Slide 22: Designer Old vs New -->
-        <div class="slide" data-slide="24">
+        <div class="slide" data-slide="25">
             <div class="slide-content slide-left">
-                <span class="section-number">24</span>
+                <span class="section-number">25</span>
                 <h1>Designer: Old Way vs New Way</h1>
                 <p class="subtitle">From pixel pusher to creative director of AI output. Design accelerates iteration,
                     not precedes it.</p>
@@ -2233,9 +2289,9 @@
         </div>
 
         <!-- Slide 23: Engineer Old vs New -->
-        <div class="slide" data-slide="25">
+        <div class="slide" data-slide="26">
             <div class="slide-content slide-left">
-                <span class="section-number">25</span>
+                <span class="section-number">26</span>
                 <h1>Engineer: Old Way vs New Way</h1>
                 <p class="subtitle">From line-by-line coder to AI orchestrator. The engineer's value is architecture and
                     judgment, not keystrokes.</p>
@@ -2272,9 +2328,9 @@
         </div>
 
         <!-- Slide 24: QA Old vs New -->
-        <div class="slide" data-slide="26">
+        <div class="slide" data-slide="27">
             <div class="slide-content slide-left">
-                <span class="section-number">26</span>
+                <span class="section-number">27</span>
                 <h1>QA: Old Way vs New Way</h1>
                 <p class="subtitle">From post-delivery gatekeeper to embedded quality partner. Validation is continuous,
                     not sequential.</p>
@@ -2310,7 +2366,7 @@
         </div>
 
         <!-- Slide 25: End -->
-        <div class="slide" data-slide="27">
+        <div class="slide" data-slide="28">
             <div class="slide-content"
                 style="display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center;">
                 <svg width="500" height="460" viewBox="0 0 420 380" xmlns="http://www.w3.org/2000/svg"
