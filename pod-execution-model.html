@@ -1075,13 +1075,13 @@
 <body>
     <div class="corner-brand">
         <svg width="50" height="40" viewBox="0 0 140 120" xmlns="http://www.w3.org/2000/svg" style="overflow: visible;">
-            <g style="transform-origin: 70px 52px; animation: orbit1 20s linear infinite;">
+            <g>
                 <circle cx="50" cy="44" r="30" fill="none" stroke="#007D99" stroke-width="3" />
             </g>
-            <g style="transform-origin: 70px 52px; animation: orbit2 25s linear infinite reverse;">
+            <g>
                 <circle cx="90" cy="44" r="30" fill="none" stroke="#007D99" stroke-width="3" stroke-dasharray="4 3" />
             </g>
-            <g style="transform-origin: 70px 52px; animation: orbit3 30s linear infinite;">
+            <g>
                 <circle cx="70" cy="74" r="30" fill="none" stroke="#D94F5C" stroke-width="3" />
             </g>
             <circle cx="70" cy="52" r="5" fill="#007D99" />
@@ -1102,7 +1102,7 @@
         <!-- Slide 1: Title -->
         <div class="slide active" data-slide="1">
             <div class="slide-content slide-center" style="position:relative; justify-content:center;">
-                <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); z-index:0;">
+                <div id="title-circles" style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); z-index:0;">
                     <svg width="576" height="528" viewBox="0 0 420 380" xmlns="http://www.w3.org/2000/svg"
                         style="overflow:visible;">
                         <g style="transform-origin:210px 190px; animation:orbit1 20s linear infinite;">
@@ -1118,6 +1118,15 @@
                         <circle cx="210" cy="190" r="6" fill="#00809B" />
                     </svg>
                 </div>
+                <script>
+                    setTimeout(function() {
+                        var el = document.getElementById('title-circles');
+                        if (el) {
+                            var gs = el.querySelectorAll('g');
+                            gs.forEach(function(g) { g.style.animationPlayState = 'paused'; });
+                        }
+                    }, 5000);
+                </script>
                 <div
                     style="position:relative; z-index:1;">
                     <h1 class="title-main">Pod Execution Model</h1>
@@ -1159,14 +1168,14 @@
                     <div style="display:flex; align-items:center; justify-content:center;">
                         <svg width="420" height="380" viewBox="0 0 420 380" xmlns="http://www.w3.org/2000/svg"
                             style="overflow:visible;">
-                            <g style="transform-origin:210px 190px; animation:orbit1 20s linear infinite;">
+                            <g style="transform-origin:210px 190px;">
                                 <circle cx="130" cy="140" r="110" fill="none" stroke="#00809B" stroke-width="2.5" />
                             </g>
-                            <g style="transform-origin:210px 190px; animation:orbit2 25s linear infinite reverse;">
+                            <g style="transform-origin:210px 190px;">
                                 <circle cx="290" cy="190" r="110" fill="none" stroke="#e9001f" stroke-width="2.5"
                                     stroke-dasharray="6 4" />
                             </g>
-                            <g style="transform-origin:210px 190px; animation:orbit3 30s linear infinite;">
+                            <g style="transform-origin:210px 190px;">
                                 <circle cx="170" cy="270" r="110" fill="none" stroke="#FF991D" stroke-width="2.5" />
                             </g>
                             <circle cx="210" cy="190" r="6" fill="#00809B" />
