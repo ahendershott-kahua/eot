@@ -33,8 +33,9 @@
 - Two-page **Miami Dade Fast Track** example displayed side by side (8.5×11 aspect ratio).
 - Subtitle: "Subject to change. Final iteration in progress."
 
-### Slide 14 — Canvas Pod Case Study *(new)*
+### Slide 14 — Canvas Pod Case Study
 - Added case study slide with inline name tags (solid for operators, dashed for advisors).
+- Tag order: Pritesh (Champion) → Colin (Engineer) → Sarah (UX Advisor).
 
 ### Slide 15 — Three Pilot Pods
 - Standardized all three pod cards to uniform format: Engineer → Champion → dashed advisor tags.
@@ -58,17 +59,30 @@
 ## Slide Navigation
 
 - Fixed duplicate `data-slide` numbers (slides 10b/11 and 15/Timeline both had collisions).
-- Renumbered all slides sequentially **1–27**. Navigation and counter now work correctly through all slides.
+- Renumbered all slides sequentially **1–29**. Navigation and counter now work correctly through all slides.
+- Section numbers match footer slide counter on every slide.
+
+### Slide 15 — kCapture Pod: Case Study *(new)*
+- Two-column layout: **Already Shipped** (floor plans, capture timelines, live 360, offline queue, comparison) + **What the Pod Is Proving**.
+- Pod tags: ProCon (Champion) → Colin (Engineer) → Bridgette (UX Advisor, dashed).
+
+### Slide 16 — kCapture Screenshot *(new)*
+- Full-screen desktop screenshot of the kCapture interface (floor plan with pins + 360 capture panel).
+
+### Slide Reordering
+- kCapture slides (15 + 16) now appear **before** Canvas Pod (17).
 
 ## Title Slide
 
 - Large 3-color rotating circles (teal, red, orange) centered as background element.
 - Text floats on top with `background: rgba(255,255,255,0.85)` for readability.
 - Dashed circle uses thinner stroke (1.5px, dash pattern 4 3).
+- **Animation auto-pauses after 5 seconds**: circles fade out, snap to balanced arrangement, fade back in.
+- Corner brand and inner slide circles are static (no animation).
 
 ## PDF Export
 
-- Regenerated full **27-slide PDF** at 1920×1080 with Kahua logo top-right on every page (2.1MB).
+- Regenerated full **29-slide PDF** at 1920×1080 with Kahua logo top-right on every page (5.1MB).
 - Added reusable generation script at `scripts/generate-pdf.js`.
 - Anyone on the project can regenerate with:
   ```
