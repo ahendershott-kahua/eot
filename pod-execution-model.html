@@ -1101,9 +1101,9 @@
     <div class="slideshow-container">
         <!-- Slide 1: Title -->
         <div class="slide active" data-slide="1">
-            <div class="slide-content slide-center">
-                <div class="logo">
-                    <svg width="500" height="460" viewBox="0 0 420 380" xmlns="http://www.w3.org/2000/svg"
+            <div class="slide-content slide-center" style="position:relative; justify-content:center;">
+                <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); z-index:0; opacity:0.25;">
+                    <svg width="600" height="550" viewBox="0 0 420 380" xmlns="http://www.w3.org/2000/svg"
                         style="overflow:visible;">
                         <g style="transform-origin:210px 190px; animation:orbit1 20s linear infinite;">
                             <circle cx="130" cy="140" r="110" fill="none" stroke="#00809B" stroke-width="2.5" />
@@ -1118,8 +1118,10 @@
                         <circle cx="210" cy="190" r="6" fill="#00809B" />
                     </svg>
                 </div>
-                <h1 class="title-main">Pod Execution Model</h1>
-                <p class="subtitle-main">How pods ship working software as fast as possible</p>
+                <div style="position:relative; z-index:1;">
+                    <h1 class="title-main">Pod Execution Model</h1>
+                    <p class="subtitle-main">How pods ship working software as fast as possible</p>
+                </div>
             </div>
         </div>
 
