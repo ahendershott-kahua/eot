@@ -16,6 +16,11 @@
 - Simplified VS Code bullet (removed specific model names).
 - PM → Champion: "Champion drafts the problem frame AND helps build a clickable prototype."
 - Designer: "Generates supporting documentation AND ships clickable UI/visuals."
+- Replaced repetitive "Build the Prototype" card with **Define Done** (acceptance criteria before building).
+
+### Slide 7 — Industry Inputs
+- Simplified prototype bullet: "AI builds clickable prototype same day."
+- Removed PM-specific references from brief-shaping language.
 
 ### Slide 9 — Stakeholder Inputs
 - Reframed QA as advisory/consultative. Added downstream regression note.
@@ -23,7 +28,10 @@
 ### Slide 10 — Artifact Expectations
 - Replaced "1-page MVP PRD" with **Rapid Project Plan** as the anchor artifact.
 - Added async advisor review bullet.
-- Added placeholder slide 10b for a Rapid Project Plan example.
+
+### Slide 10b — Rapid Project Plan Example *(new)*
+- Two-page **Miami Dade Fast Track** example displayed side by side (8.5×11 aspect ratio).
+- Subtitle: "Subject to change. Final iteration in progress."
 
 ### Slide 14 — Canvas Pod Case Study *(new)*
 - Added case study slide with inline name tags (solid for operators, dashed for advisors).
@@ -52,9 +60,15 @@
 - Fixed duplicate `data-slide` numbers (slides 10b/11 and 15/Timeline both had collisions).
 - Renumbered all slides sequentially **1–27**. Navigation and counter now work correctly through all slides.
 
+## Title Slide
+
+- Large 3-color rotating circles (teal, red, orange) centered as background element.
+- Text floats on top with `background: rgba(255,255,255,0.85)` for readability.
+- Dashed circle uses thinner stroke (1.5px, dash pattern 4 3).
+
 ## PDF Export
 
-- Generated full **27-slide PDF** at 1920×1080 with Kahua logo top-right on every page.
+- Regenerated full **27-slide PDF** at 1920×1080 with Kahua logo top-right on every page (2.1MB).
 - Added reusable generation script at `scripts/generate-pdf.js`.
 - Anyone on the project can regenerate with:
   ```
