@@ -97,6 +97,7 @@ h1 {
     color: #1a1a1a;
     letter-spacing: -0.03em;
     line-height: 1.05;
+    background: rgba(255, 255, 255, 0.85);
 }
 
 .subtitle-main {
