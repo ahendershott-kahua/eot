@@ -1561,13 +1561,116 @@
             </div>
         </div>
 
-        <!-- Slide 10b: Rapid Project Plan Example (Placeholder) -->
+        <!-- Slide 10b: Rapid Project Plan Example -->
         <div class="slide" data-slide="11">
-            <div class="slide-content"
-                style="display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center;">
-                <span class="section-number" style="color:#ccc;">10b</span>
-                <h1 style="color:#ccc; font-size:36px;">Rapid Project Plan Example</h1>
-                <p style="color:#bbb; font-size:16px; margin-top:12px;">Placeholder — example content to be added</p>
+            <div class="slide-content slide-left" style="position:relative;">
+                <span class="section-number">10b</span>
+                <div style="display:flex; align-items:baseline; gap:16px; margin-bottom:16px;">
+                    <h1 style="font-size:clamp(24px,3vw,36px); margin-bottom:0;">Rapid Project Plan</h1>
+                    <span style="font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:1px; background:#FF991D; color:white; padding:3px 10px; border-radius:4px;">Example Only</span>
+                </div>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+                    <!-- Page 1 -->
+                    <div style="background:white; border:1px solid #e0e0e0; border-radius:8px; padding:20px; box-shadow:0 2px 8px rgba(0,0,0,0.06); font-size:10px; line-height:1.6; color:#333; overflow:hidden; max-height:620px;">
+                        <div style="font-size:16px; font-weight:800; color:#1a1a1a; margin-bottom:8px;">Miami Dade Fast Track</div>
+                        <div style="font-size:11px; font-weight:700; margin-bottom:4px;">TL;DR</div>
+                        <p style="font-size:9px; color:#555; margin-bottom:6px;">Stabilize File Manager performance for large folder structures by migrating folder permissions to the new domain permission model, then deliver bulk permission management to eliminate folder-by-folder edits.</p>
+                        <p style="font-size:9px; color:#555; margin-bottom:10px;"><strong>Success =</strong> large projects load without degradation, admins modify permissions across thousands of folders efficiently.</p>
+
+                        <div style="border-top:1px solid #eee; padding-top:8px; margin-bottom:8px;">
+                            <div style="font-size:11px; font-weight:700; margin-bottom:4px;">What We're Shipping</div>
+                            <ul style="padding-left:14px; margin:0; font-size:9px; color:#555;">
+                                <li><strong>Backend Architecture:</strong> Migrate to new domain permission model</li>
+                                <li><strong>Performance Stabilization:</strong> Eliminate deep folder permission crawl</li>
+                                <li><strong>UI Enhancement:</strong> Bulk permission management workflow</li>
+                            </ul>
+                        </div>
+
+                        <div style="border-top:1px solid #eee; padding-top:8px; margin-bottom:8px;">
+                            <div style="font-size:11px; font-weight:700; margin-bottom:4px;">Problem Breakdown</div>
+                            <div style="font-size:9px; font-weight:600; margin-bottom:2px;">Performance</div>
+                            <ul style="padding-left:14px; margin:0 0 4px 0; font-size:9px; color:#555;">
+                                <li>Deep folder trees degrade performance</li>
+                                <li>Thousands of folders per project</li>
+                                <li>API workarounds do not scale</li>
+                            </ul>
+                            <div style="font-size:9px; font-weight:600; margin-bottom:2px;">Usability</div>
+                            <ul style="padding-left:14px; margin:0 0 4px 0; font-size:9px; color:#555;">
+                                <li>Manual edits per folder required</li>
+                                <li>Miami Dade: ~4000 folders, ~75 groups</li>
+                                <li>Current UI not viable at enterprise scale</li>
+                            </ul>
+                        </div>
+
+                        <div style="border-top:1px solid #eee; padding-top:8px; margin-bottom:8px;">
+                            <div style="font-size:11px; font-weight:700; margin-bottom:4px;">Goal</div>
+                            <p style="font-size:9px; color:#555; margin:0;">Ensure File Manager supports enterprise-scale folder structures without performance degradation while enabling efficient bulk permission management.</p>
+                        </div>
+
+                        <div style="border-top:1px solid #eee; padding-top:8px;">
+                            <div style="font-size:11px; font-weight:700; margin-bottom:4px;">Scope — Phase 1: Performance</div>
+                            <ul style="padding-left:14px; margin:0; font-size:9px; color:#555;">
+                                <li>Replace folder permission logic with new domain model</li>
+                                <li>Align folder architecture with partition-level permissions</li>
+                                <li>Validate performance on large data sets</li>
+                            </ul>
+                            <p style="font-size:8px; color:#999; margin:4px 0 0 0; font-style:italic;">Out of scope: usability enhancements before performance stabilization</p>
+                        </div>
+                        <div style="font-size:8px; color:#bbb; margin-top:10px; display:flex; justify-content:space-between;"><span>Miami Dade Fast Track</span><span>1</span></div>
+                    </div>
+
+                    <!-- Page 2 -->
+                    <div style="background:white; border:1px solid #e0e0e0; border-radius:8px; padding:20px; box-shadow:0 2px 8px rgba(0,0,0,0.06); font-size:10px; line-height:1.6; color:#333; overflow:hidden; max-height:620px;">
+                        <div style="font-size:11px; font-weight:700; margin-bottom:4px;">Scope — Phase 2: Usability</div>
+                        <ul style="padding-left:14px; margin:0 0 8px 0; font-size:9px; color:#555;">
+                            <li>Introduce bulk permission editing workflow</li>
+                            <li>Enable cross-folder updates in a single action</li>
+                            <li>Ensure solution benefits all customers, not just Miami Dade</li>
+                        </ul>
+
+                        <div style="border-top:1px solid #eee; padding-top:8px; margin-bottom:8px;">
+                            <div style="font-size:11px; font-weight:700; margin-bottom:4px;">Core Technical Decisions</div>
+                            <ul style="padding-left:14px; margin:0; font-size:9px; color:#555;">
+                                <li>Adopt onboarding rewrite permission model for folders</li>
+                                <li>Avoid API-based mass permission mutation</li>
+                                <li>Performance validation before UI improvements begin</li>
+                            </ul>
+                        </div>
+
+                        <div style="border-top:1px solid #eee; padding-top:8px; margin-bottom:8px;">
+                            <div style="font-size:11px; font-weight:700; margin-bottom:4px;">Constraints & Trade-offs</div>
+                            <ul style="padding-left:14px; margin:0; font-size:9px; color:#555;">
+                                <li>Euro engineering team owns implementation</li>
+                                <li>Euro team is resource constrained</li>
+                                <li>Performance must be solved before usability</li>
+                                <li>High-visibility customers involved</li>
+                                <li>No external engineering support for Euro team</li>
+                            </ul>
+                        </div>
+
+                        <div style="border-top:1px solid #eee; padding-top:8px; margin-bottom:8px;">
+                            <div style="font-size:11px; font-weight:700; margin-bottom:4px;">Phased Plan</div>
+                            <div style="font-size:9px; color:#555;">
+                                <strong>Phase 1:</strong> Define migration approach · Assign engineering ownership · Validate performance on large projects<br>
+                                <strong>Phase 2:</strong> Design bulk permission UX · Implement efficient update workflow · Test across Miami Dade and GSA<br>
+                                <strong>Phase 3:</strong> Generalize rollout across enterprise · Monitor performance and feedback
+                            </div>
+                        </div>
+
+                        <div style="border-top:1px solid #eee; padding-top:8px;">
+                            <div style="font-size:11px; font-weight:700; margin-bottom:4px;">Stakeholders</div>
+                            <ul style="padding-left:14px; margin:0; font-size:9px; color:#555;">
+                                <li>Engineering Architecture: Colin</li>
+                                <li>Implementation: Vlad and Euro Team</li>
+                                <li>API Context: Mike Richie</li>
+                                <li>Customer Success: Kimberly Day</li>
+                                <li>Partner Enablement: John Quigley</li>
+                            </ul>
+                        </div>
+                        <div style="font-size:8px; color:#bbb; margin-top:10px; display:flex; justify-content:space-between;"><span>Miami Dade Fast Track</span><span>2</span></div>
+                    </div>
+                </div>
             </div>
         </div>
 
