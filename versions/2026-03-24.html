@@ -1092,7 +1092,7 @@
         class="draft-bar">
         <span
             style="font-size:9px; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; color:#1a1a1a;">Current
-            Draft · Mar 23, 2026</span>
+            Draft · Mar 24, 2026</span>
         <a href="../pod-execution-model.pdf" download
             style="text-decoration:none; display:inline-flex; align-items:center; gap:4px; border:1.5px solid #1a1a1a; border-radius:4px; padding:3px 8px; font-size:9px; font-weight:700; color:#1a1a1a; text-transform:uppercase; letter-spacing:0.5px; transition:background 0.2s, color 0.2s;"
             onmouseover="this.style.background='#1a1a1a';this.style.color='#fff'"
@@ -2115,7 +2115,7 @@
                 <p
                     style="font-size:14px; font-weight:700; text-transform:uppercase; letter-spacing:2px; color:#888; margin-bottom:8px;">
                     Current Draft</p>
-                <p style="font-size:13px; color:#aaa;">March 23, 2026</p>
+                <p style="font-size:13px; color:#aaa;">March 24, 2026</p>
             </div>
         </div>
 
@@ -2199,6 +2199,77 @@
             }
         }
     </style>
+
+    <!-- Secret Version History Easter Egg -->
+    <div id="versionModal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.5); z-index:999999; align-items:center; justify-content:center;">
+        <div style="background:white; border-radius:12px; padding:32px; max-width:420px; width:90%; box-shadow:0 24px 48px rgba(0,0,0,0.15);">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+                <h2 style="margin:0; font-size:18px; font-weight:800; color:#1a1a1a;">Version History</h2>
+                <button onclick="document.getElementById('versionModal').style.display='none'" style="background:none; border:none; font-size:20px; cursor:pointer; color:#888;">✕</button>
+            </div>
+            <div id="versionList" style="display:flex; flex-direction:column; gap:8px;"></div>
+            <p style="margin-top:16px; font-size:10px; color:#aaa; text-align:center;">Type "history" or click the Kahua logo 5× to open this panel</p>
+        </div>
+    </div>
+
+    <script>
+    (function() {
+        // Version manifest
+        const versions = [
+            { date: '2026-03-24', label: 'March 24, 2026', note: 'Current', file: 'versions/2026-03-24.html' },
+            { date: '2026-03-23', label: 'March 23, 2026', note: 'Appendix + slide overhauls', file: 'versions/2026-03-23.html' },
+            { date: '2026-03-22', label: 'March 22, 2026', note: 'Initial refinements', file: 'versions/2026-03-22.html' },
+            { date: '2026-03-21', label: 'March 21, 2026', note: 'First draft', file: 'versions/2026-03-21.html' },
+        ];
+
+        // Build version list
+        const list = document.getElementById('versionList');
+        versions.forEach(v => {
+            const row = document.createElement('a');
+            row.href = v.file;
+            row.target = '_blank';
+            row.style.cssText = 'display:flex; justify-content:space-between; align-items:center; padding:10px 14px; border-radius:8px; text-decoration:none; color:#1a1a1a; border:1px solid #e8e8e8; transition:all 0.15s;';
+            row.onmouseover = function() { this.style.background='#f5f5f5'; this.style.borderColor='#00809B'; };
+            row.onmouseout = function() { this.style.background='white'; this.style.borderColor='#e8e8e8'; };
+            row.innerHTML = '<div><div style="font-size:13px; font-weight:700;">' + v.label + '</div><div style="font-size:11px; color:#888;">' + v.note + '</div></div>' + (v.note === 'Current' ? '<span style="font-size:9px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#00809B; background:#e6f4f7; padding:3px 8px; border-radius:4px;">Current</span>' : '<span style="font-size:11px; color:#aaa;">↗</span>');
+            list.appendChild(row);
+        });
+
+        function showModal() {
+            document.getElementById('versionModal').style.display = 'flex';
+        }
+
+        // Trigger 1: Type "history"
+        let typed = '';
+        document.addEventListener('keydown', function(e) {
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+            typed += e.key.toLowerCase();
+            if (typed.length > 20) typed = typed.slice(-20);
+            if (typed.includes('history')) { showModal(); typed = ''; }
+        });
+
+        // Trigger 2: Click Kahua logo 5 times
+        let clickCount = 0;
+        let clickTimer = null;
+        const logo = document.querySelector('.kahua-logo');
+        if (logo) {
+            logo.style.cursor = 'pointer';
+            logo.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                clickCount++;
+                clearTimeout(clickTimer);
+                clickTimer = setTimeout(() => { clickCount = 0; }, 2000);
+                if (clickCount >= 5) { showModal(); clickCount = 0; }
+            });
+        }
+
+        // Close on backdrop click
+        document.getElementById('versionModal').addEventListener('click', function(e) {
+            if (e.target === this) this.style.display = 'none';
+        });
+    })();
+    </script>
 </body>
 
 </html>
