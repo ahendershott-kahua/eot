@@ -1837,9 +1837,12 @@
                                 integration, continuous testing</div>
                         </div>
                         <div style="padding-left:14px;">
-                            <div style="font-size:13px; font-weight:700; color:#1a1a1a; margin-bottom:4px;">Ship, learn, deploy</div>
-                            <div style="font-size:11px; color:#888; line-height:1.5;">Capture learnings, feed next cycle. Regression validation, release deployment, promotion to production</div>
-                            <div style="font-size:9px; color:#aaa; margin-top:4px; font-style:italic;">Regression currently partially manual</div>
+                            <div style="font-size:13px; font-weight:700; color:#1a1a1a; margin-bottom:4px;">Ship, learn,
+                                deploy</div>
+                            <div style="font-size:11px; color:#888; line-height:1.5;">Capture learnings, feed next
+                                cycle. Regression validation, release deployment, promotion to production</div>
+                            <div style="font-size:9px; color:#aaa; margin-top:4px; font-style:italic;">Regression
+                                currently partially manual</div>
                         </div>
                     </div>
 
@@ -1872,55 +1875,54 @@
             <div class="slide-content slide-left">
                 <span class="section-number">19</span>
                 <h1>Who Drives Each Phase</h1>
-                <p class="subtitle">Every role is engaged every phase. Bold = peak ownership. The flow, not the
-                    calendar, determines who leads.</p>
+                <p class="subtitle">Engineer and Stakeholder are constant. All other roles participate as needed.</p>
                 <div class="phase-swimlane">
                     <div class="phase-header">
                         <span></span>
                         <span>Discover</span>
                         <span>Prototype</span>
                         <span>Build</span>
-                        <span>Launch</span>
-                    </div>
-                    <div class="phase-row">
-                        <div class="phase-label" style="color: #00809B;">PM</div>
-                        <div class="phase-cell phase-cell-peak">Meetings, synthesize PRD, lock scope</div>
-                        <div class="phase-cell phase-cell-peak">Build clickable prototype, validate with users</div>
-                        <div class="phase-cell">Refine scope, cut non-core, support testing</div>
-                        <div class="phase-cell">Soft launch coordination, feedback capture</div>
-                    </div>
-                    <div class="phase-row">
-                        <div class="phase-label" style="color: #e9001f;">Designer</div>
-                        <div class="phase-cell">Research, competitor audit, pattern library</div>
-                        <div class="phase-cell phase-cell-peak">Refine prototype, add all states and flows</div>
-                        <div class="phase-cell phase-cell-peak">Polish interactions directly in codebase</div>
-                        <div class="phase-cell">Final interaction polish, launch visuals</div>
+                        <span>Launch &amp; Deploy</span>
                     </div>
                     <div class="phase-row">
                         <div class="phase-label" style="color: #219300;">Engineer</div>
                         <div class="phase-cell">Tech assessment, integration mapping, env setup</div>
                         <div class="phase-cell">Scaffold real app from prototype patterns</div>
                         <div class="phase-cell phase-cell-peak">Core flow end-to-end, API integration, testing</div>
-                        <div class="phase-cell phase-cell-peak">Bug fixes, edge cases, deploy, release</div>
+                        <div class="phase-cell phase-cell-peak">Bug fixes, edge cases, regression, deploy</div>
                     </div>
                     <div class="phase-row">
-                        <div class="phase-label" style="color: #FF991D;">QA</div>
-                        <div class="phase-cell">Define test strategy from PRD</div>
-                        <div class="phase-cell">Test prototype, shape requirements through bugs</div>
-                        <div class="phase-cell phase-cell-peak">Continuous testing on real builds, edge cases</div>
-                        <div class="phase-cell phase-cell-peak">Regression pass, release sign-off</div>
-                    </div>
-                    <div class="phase-row">
-                        <div class="phase-label" style="color: #333;">Pod Lead</div>
+                        <div class="phase-label" style="color: #333;">Stakeholder</div>
                         <div class="phase-cell phase-cell-peak">Scope lock, define done, set cadence</div>
                         <div class="phase-cell">Stakeholder demo, capture feedback, hold scope</div>
                         <div class="phase-cell">Mid-cycle check, kill scope creep, unblock</div>
                         <div class="phase-cell phase-cell-peak">Release decision, retrospective, capture lessons</div>
                     </div>
+                    <div class="phase-row" style="opacity:0.55;">
+                        <div class="phase-label" style="color: #00809B;">PM *</div>
+                        <div class="phase-cell phase-cell-peak">Meetings, synthesize PRD, lock scope</div>
+                        <div class="phase-cell phase-cell-peak">Build clickable prototype, validate with users</div>
+                        <div class="phase-cell">Refine scope, cut non-core, support testing</div>
+                        <div class="phase-cell">Soft launch coordination, feedback capture</div>
+                    </div>
+                    <div class="phase-row" style="opacity:0.55;">
+                        <div class="phase-label" style="color: #e9001f;">Designer *</div>
+                        <div class="phase-cell">Research, competitor audit, pattern library</div>
+                        <div class="phase-cell phase-cell-peak">Refine prototype, add all states and flows</div>
+                        <div class="phase-cell phase-cell-peak">Polish interactions directly in codebase</div>
+                        <div class="phase-cell">Final interaction polish, launch visuals</div>
+                    </div>
+                    <div class="phase-row" style="opacity:0.55;">
+                        <div class="phase-label" style="color: #FF991D;">QA *</div>
+                        <div class="phase-cell">Define test strategy from PRD</div>
+                        <div class="phase-cell">Test prototype, shape requirements through bugs</div>
+                        <div class="phase-cell phase-cell-peak">Continuous testing on real builds, edge cases</div>
+                        <div class="phase-cell phase-cell-peak">Regression pass, release sign-off</div>
+                    </div>
                 </div>
-                <blockquote class="callout" style="margin-top: 16px;">
-                    This is not waterfall. Roles overlap. Phases compress. The grid shows peak ownership, not sequential
-                    handoffs.
+                <div style="font-size:10px; color:#999; margin-top:10px; font-style:italic;">* Advisory roles — can be filled by engineer, stakeholder, or on-demand advisor depending on pod composition</div>
+                <blockquote class="callout" style="margin-top: 12px;">
+                    Roles overlap. Phases compress. Rows marked * are advisory functions, not required headcount.
                 </blockquote>
             </div>
         </div>
