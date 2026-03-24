@@ -4,11 +4,18 @@
 
 - **Stakeholder → Champion**: Renamed the pod role "Stakeholder" to "Champion" across the entire deck. External stakeholder references preserved.
 - **Developer → Engineer**: Standardized all "Developer" labels to "Engineer".
+- **PRD → Documentation** (split approach): New-way/output contexts say "documentation"; old-way criticism slides keep "PRD" for rhetorical contrast. Quote slide (#7) kept as-is.
+- **Draft MVP PRD → Draft Documentation**: Renamed the card title on slide 7.
 
 ## Slide Updates
 
 ### Slide 4 — Pod Composition
 - Restructured as two-tier layout: **Core Operators** (Engineer + Champion) with bold bordered cards, **Available Support** (Platform, Host, QA, UX, PM, CS) with dashed tags.
+
+### Slide 6 — Roles Collapse
+- Simplified VS Code bullet (removed specific model names).
+- PM → Champion: "Champion drafts the problem frame AND helps build a clickable prototype."
+- Designer: "Generates supporting documentation AND ships clickable UI/visuals."
 
 ### Slide 9 — Stakeholder Inputs
 - Reframed QA as advisory/consultative. Added downstream regression note.
