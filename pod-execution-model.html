@@ -1029,7 +1029,7 @@
 
         .phase-header {
             display: grid;
-            grid-template-columns: 80px repeat(3, 1fr);
+            grid-template-columns: 80px repeat(4, 1fr);
             gap: 0;
             border-bottom: 2px solid #1a1a1a;
             padding-bottom: 8px;
@@ -1046,7 +1046,7 @@
 
         .phase-row {
             display: grid;
-            grid-template-columns: 80px repeat(3, 1fr);
+            grid-template-columns: 80px repeat(4, 1fr);
             gap: 0;
             border-bottom: 1px solid #f0f0f0;
             padding: 10px 0;
@@ -1862,36 +1862,42 @@
                         <span></span>
                         <span>Discover</span>
                         <span>Iterate</span>
+                        <span>Build</span>
                         <span>Launch &amp; Deploy</span>
                     </div>
                     <div class="phase-row">
                         <div class="phase-label" style="color: #219300;">Engineer</div>
                         <div class="phase-cell">Tech assessment, integration mapping, env setup</div>
-                        <div class="phase-cell phase-cell-peak">Scaffold from prototype, build end-to-end, API integration, testing</div>
+                        <div class="phase-cell">Scaffold real app from prototype patterns</div>
+                        <div class="phase-cell phase-cell-peak">Core flow end-to-end, API integration, testing</div>
                         <div class="phase-cell phase-cell-peak">Bug fixes, edge cases, regression, deploy</div>
                     </div>
                     <div class="phase-row">
                         <div class="phase-label" style="color: #333;">Champion</div>
                         <div class="phase-cell phase-cell-peak">Scope lock, define done, set cadence</div>
-                        <div class="phase-cell">Stakeholder demo, capture feedback, hold scope, unblock</div>
+                        <div class="phase-cell">Stakeholder demo, capture feedback, hold scope</div>
+                        <div class="phase-cell">Mid-cycle check, kill scope creep, unblock</div>
                         <div class="phase-cell phase-cell-peak">Release decision, retrospective, capture lessons</div>
                     </div>
                     <div class="phase-row">
                         <div class="phase-label" style="color: #00809B;">PM *</div>
                         <div class="phase-cell phase-cell-peak">Meetings, synthesize PRD, lock scope</div>
-                        <div class="phase-cell phase-cell-peak">Build prototype, validate with users, refine scope</div>
+                        <div class="phase-cell phase-cell-peak">Build clickable prototype, validate with users</div>
+                        <div class="phase-cell">Refine scope, cut non-core, support testing</div>
                         <div class="phase-cell">Soft launch coordination, feedback capture</div>
                     </div>
                     <div class="phase-row">
                         <div class="phase-label" style="color: #e9001f;">Designer *</div>
                         <div class="phase-cell">Research, competitor audit, pattern library</div>
-                        <div class="phase-cell phase-cell-peak">Refine prototype, add states, polish interactions in codebase</div>
+                        <div class="phase-cell phase-cell-peak">Refine prototype, add all states and flows</div>
+                        <div class="phase-cell phase-cell-peak">Polish interactions directly in codebase</div>
                         <div class="phase-cell">Final interaction polish, launch visuals</div>
                     </div>
                     <div class="phase-row">
                         <div class="phase-label" style="color: #FF991D;">QA *</div>
                         <div class="phase-cell">Define test strategy from PRD</div>
-                        <div class="phase-cell phase-cell-peak">Test prototype, continuous testing on real builds, edge cases</div>
+                        <div class="phase-cell">Test prototype, shape requirements through bugs</div>
+                        <div class="phase-cell phase-cell-peak">Continuous testing on real builds, edge cases</div>
                         <div class="phase-cell phase-cell-peak">Regression pass, release sign-off</div>
                     </div>
                 </div>
