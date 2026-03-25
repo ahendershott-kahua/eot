@@ -38,6 +38,10 @@
 ## Dates
 - All dates updated to **March 25, 2026**.
 
+## Version History
+- Fixed "Current" entry: no longer links to a non-existent file. Clicking "Current" stays on the page.
+- Restored missing **March 24, 2026** version entry in the manifest.
+
 ## Rollback
 - Tagged `pre-edits-mar25` before any changes began (commit `9976cb7`).
 - To rollback: `git reset --hard pre-edits-mar25`
