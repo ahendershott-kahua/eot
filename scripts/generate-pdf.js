@@ -25,7 +25,7 @@ const path = require('path');
 const PORT = 8765;
 const PROJECT_DIR = path.resolve(__dirname, '..');
 const OUTPUT_FILE = path.join(PROJECT_DIR, 'pod-execution-model.pdf');
-const HTML_FILE = 'pod-execution-model.html';
+const HTML_FILE = 'pod-execution-model.unencrypted.html';
 
 // Simple static file server
 function startServer() {
