@@ -1,3 +1,49 @@
+# Changes — March 25, 2026
+
+## New Slides
+
+### Slide 11 — Rapid Project Plan: First Artifact *(new)*
+- Seven-field template showing required entry artifact for every pod: Problem, Scope Boundary, Primary User, Test Workflow, Definition of Done, Success Signal, Owner.
+- Color-coded two-column grid layout.
+
+### Slide 13 — Pod Execution Vocabulary *(new)*
+- Nine defined terms in a clean two-column grid: Pod, Champion, Advisor, Rapid Project Plan, Prototype, Inputs, Iteration Loop, Done, Demo.
+- Definitions are intentionally flexible to avoid hard lines.
+- Iterated through multiple design passes (colored bars → clean bottom-border layout).
+
+### Slide 27 — Local Validation Scales to Market Patterns *(new)*
+- Clarifies how pods avoid one-off solutions.
+- Four bullets: validate locally, aggregate centrally, graduate patterns, insight through reuse.
+
+## Slide Updates
+
+### Slide 12 — Rapid Project Plan (Miami Dade Example)
+- Swapped order: template slide (11) now comes before the example slide (12).
+- Updated subtitle: "This template is actively being modified and standardized. Example shown from a live pod."
+
+### Slide 9 — Stakeholder Inputs
+- Removed "weekly" from demo reference.
+
+### Slide 13 — Pod Execution Vocabulary
+- Removed "Launch" as a defined term.
+- Removed "weekly" from Demo definition.
+- Removed "testable" from all definitions.
+- Softened all definitions to avoid hard prescriptive language.
+- Added "Champion" and "Advisor" as separate defined terms.
+
+## Slide Navigation
+- Renumbered all slides sequentially **1–32**. Counter updated throughout.
+- Total slide count now **32**.
+
+## Dates
+- All dates updated to **March 25, 2026**.
+
+## Rollback
+- Tagged `pre-edits-mar25` before any changes began (commit `9976cb7`).
+- To rollback: `git reset --hard pre-edits-mar25`
+
+---
+
 # Changes — March 24, 2026
 
 ## Terminology
