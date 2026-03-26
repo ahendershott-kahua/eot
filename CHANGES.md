@@ -2,17 +2,49 @@
 
 ## Terminology
 
-- **Prototype → Iteration**: Replaced all 36 instances of "prototype" throughout the entire deck with "iteration" and contextual alternatives ("working version", "artifact"). Per CTO direction.
-- Vocabulary slide updated: "Prototype" entry renamed to "Iteration" with new definition.
-- Quote slide now reads: "They operate around an Iteration."
-- Varied usage to avoid overuse of any single term.
+- **Prototype → Iteration**: Replaced all instances of "prototype" throughout the entire deck with "iteration" and contextual alternatives ("working version", "artifact"). Per CTO direction.
+- Vocabulary slide: "Prototype" entry renamed to **Iteration** with new definition.
+- Quote slide now reads: **"They operate around an Iteration."**
+
+## Slide Content Updates
+
+### Slide 7 — Designer Inputs
+- Callout rewritten: "A designer with VS Code can produce a clickable artifact in a single iteration session" (was "...in 2 hours").
+
+### Slide 20 — Three Pilot Pods
+- All three pod cards restructured to labeled format: `Engineer:`, `Champion:`, `Advisors:` (was inline names).
+- Calendar Pod: added Steve Stankiewicz as Champion, Denny + Bridgette as Advisors.
+- Strategic Apps Pod: Vlado = Engineer, Sakiba + Jonathan = Champions, Brian Haines = Advisor.
+- Forward Deployed Pod: Champion = Jordan Hoff, Engineer/Advisors = "--".
+- Removed several bullet descriptions from each pod card.
+- Forward Deployed callout changed to "Engineering support required before activation."
+- Bottom callout shortened: removed "Strategic Capital Planning pod operates until first customer-aligned execution pod launches."
+
+### Slide 21 — What Changes Now
+- "This Week" → **"Now"**, "Next Week" → **"Next"**.
+- Replaced "Weeks, not months. New muscle memory starts now" with "Pod execution coordination and artifact tracking owned centrally."
+
+### Slide 24 — Who Drives Each Phase
+- Subtitle rewritten: "Engineer and Champion are constant. All other roles participate as needed." (was "Every role is engaged every phase...")
+- PM, Designer, QA rows now marked with `*` as advisory roles.
+- Added footnote: "Rows marked * are advisory functions, not required headcount."
+- Bottom callout rewritten to match.
+
+### Appendix — PM Deep Dive
+- Callout rewritten: "The PM who ships an iteration discovers what works. The PM who ships a PRD describes what might." (was "...learns more than the PM who ships a PRD on Friday.")
+
+### Appendix — Designer Deep Dive
+- Callout rewritten: "A designer with an AI pair can now do work that once required a small team. Roles collapse into one workflow." (was "...produce what used to take a team of three two weeks, in a single afternoon.")
+
+### Appendix — Engineer Deep Dive
+- Callout rewritten: "The engineer who directs AI and ships working results outpaces the team that hand codes every step." (was "...ships in days outpaces the team that hand-codes for weeks.")
 
 ## Dates
 - All dates updated to **March 26, 2026**.
 - Saved **March 25** version snapshot to `versions/2026-03-25.html`.
 
 ## PDF
-- Regenerated **32-slide PDF** with all iteration terminology.
+- Regenerated **32-slide PDF** with all changes.
 
 ---
 
