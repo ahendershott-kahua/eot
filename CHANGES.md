@@ -11,15 +11,6 @@
 ### Slide 7 — Designer Inputs
 - Callout rewritten: "A designer with VS Code can produce a clickable artifact in a single iteration session" (was "...in 2 hours").
 
-### Slide 20 — Three Pilot Pods
-- All three pod cards restructured to labeled format: `Engineer:`, `Champion:`, `Advisors:` (was inline names).
-- Calendar Pod: added Steve Stankiewicz as Champion, Denny + Bridgette as Advisors.
-- Strategic Apps Pod: Vlado = Engineer, Sakiba + Jonathan = Champions, Brian Haines = Advisor.
-- Forward Deployed Pod: Champion = Jordan Hoff, Engineer/Advisors = "--".
-- Removed several bullet descriptions from each pod card.
-- Forward Deployed callout changed to "Engineering support required before activation."
-- Bottom callout shortened: removed "Strategic Capital Planning pod operates until first customer-aligned execution pod launches."
-
 ### Slide 21 — What Changes Now
 - "This Week" → **"Now"**, "Next Week" → **"Next"**.
 - Replaced "Weeks, not months. New muscle memory starts now" with "Pod execution coordination and artifact tracking owned centrally."
