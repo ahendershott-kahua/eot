@@ -46,17 +46,16 @@ document.addEventListener('DOMContentLoaded', () => {
         prevBtn.disabled = currentSlide === 1;
         nextBtn.disabled = currentSlide === totalSlides;
 
-        // Hide corner brand and draft bar on title slide and fullbleed slides
+        // Hide corner brand and draft bar on fullbleed slides only
         const cornerBrand = document.querySelector('.corner-brand');
         const draftBar = document.querySelector('.draft-bar');
         const activeSlide = document.querySelector(`.slide[data-slide="${currentSlide}"]`);
         const isFullbleed = activeSlide && activeSlide.hasAttribute('data-fullbleed');
-        const isTitle = currentSlide === 1;
         if (cornerBrand) {
-            cornerBrand.style.display = (isTitle || isFullbleed) ? 'none' : 'block';
+            cornerBrand.style.display = isFullbleed ? 'none' : 'block';
         }
         if (draftBar) {
-            draftBar.style.display = (isTitle || isFullbleed) ? 'none' : 'flex';
+            draftBar.style.display = isFullbleed ? 'none' : 'flex';
         }
     }
 
