@@ -99,21 +99,23 @@ function startServer() {
 
                 const isFullbleed = slide.hasAttribute('data-fullbleed');
 
-                // Kahua logo top-right (all slides)
-                const logoDiv = document.createElement('div');
-                logoDiv.style.cssText = 'position: absolute; top: 48px; right: 80px; z-index: 10;';
-                if (logoSrc) {
-                    logoDiv.innerHTML = `<img src="${logoSrc}" style="height: 44px;">`;
-                } else {
-                    logoDiv.innerHTML = `
-                        <svg width="50" height="40" viewBox="0 0 140 120" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="50" cy="44" r="30" fill="none" stroke="#007D99" stroke-width="3"/>
-                            <circle cx="90" cy="44" r="30" fill="none" stroke="#007D99" stroke-width="3" stroke-dasharray="4 3"/>
-                            <circle cx="70" cy="74" r="30" fill="none" stroke="#D94F5C" stroke-width="3"/>
-                            <circle cx="70" cy="52" r="5" fill="#007D99"/>
-                        </svg>`;
+                // Kahua logo top-right (non-fullbleed slides only)
+                if (!isFullbleed) {
+                    const logoDiv = document.createElement('div');
+                    logoDiv.style.cssText = 'position: absolute; top: 48px; right: 80px; z-index: 10;';
+                    if (logoSrc) {
+                        logoDiv.innerHTML = `<img src="${logoSrc}" style="height: 44px;">`;
+                    } else {
+                        logoDiv.innerHTML = `
+                            <svg width="50" height="40" viewBox="0 0 140 120" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="44" r="30" fill="none" stroke="#007D99" stroke-width="3"/>
+                                <circle cx="90" cy="44" r="30" fill="none" stroke="#007D99" stroke-width="3" stroke-dasharray="4 3"/>
+                                <circle cx="70" cy="74" r="30" fill="none" stroke="#D94F5C" stroke-width="3"/>
+                                <circle cx="70" cy="52" r="5" fill="#007D99"/>
+                            </svg>`;
+                    }
+                    slide.appendChild(logoDiv);
                 }
-                slide.appendChild(logoDiv);
 
                 // Corner brand + draft bar (non-fullbleed slides only)
                 if (!isFullbleed) {
