@@ -70,17 +70,20 @@ function startServer() {
             document.body.style.cssText = 'height: auto !important; overflow: visible !important;';
             document.documentElement.style.cssText = 'height: auto !important; overflow: visible !important;';
 
-            // Hide nav, corner-brand, draft labels
-            document.querySelectorAll('.nav-bar, .corner-brand').forEach(el => el.style.display = 'none');
-            document.querySelectorAll('body > div').forEach(el => {
-                if (el.textContent.includes('CURRENT DRAFT') && !el.classList.contains('slideshow-container')) {
-                    el.style.display = 'none';
-                }
-            });
+            // Hide nav only
+            document.querySelectorAll('.nav-bar').forEach(el => el.style.display = 'none');
 
-            // Get logo source
+            // Hide the fixed corner-brand and draft-bar (we'll add per-slide versions)
+            document.querySelectorAll('.corner-brand').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.draft-bar').forEach(el => el.style.display = 'none');
+
+            // Get logo source and draft bar HTML
             const logoImg = document.querySelector('.kahua-logo img');
             const logoSrc = logoImg ? logoImg.src : null;
+            const cornerBrand = document.querySelector('.corner-brand');
+            const cornerBrandHTML = cornerBrand ? cornerBrand.innerHTML : '';
+            const draftBar = document.querySelector('.draft-bar');
+            const draftBarHTML = draftBar ? draftBar.innerHTML : '';
 
             // Force every slide visible and add logo
             document.querySelectorAll('.slide').forEach(slide => {
@@ -94,7 +97,9 @@ function startServer() {
                     top: auto !important; left: auto !important;
                 `;
 
-                // Kahua logo top-right
+                const isFullbleed = slide.hasAttribute('data-fullbleed');
+
+                // Kahua logo top-right (all slides)
                 const logoDiv = document.createElement('div');
                 logoDiv.style.cssText = 'position: absolute; top: 48px; right: 80px; z-index: 10;';
                 if (logoSrc) {
@@ -109,6 +114,21 @@ function startServer() {
                         </svg>`;
                 }
                 slide.appendChild(logoDiv);
+
+                // Corner brand + draft bar (non-fullbleed slides only)
+                if (!isFullbleed) {
+                    // Corner brand circles
+                    const brandDiv = document.createElement('div');
+                    brandDiv.style.cssText = 'position: absolute; top: 10px; left: 14px; z-index: 10;';
+                    brandDiv.innerHTML = cornerBrandHTML;
+                    slide.appendChild(brandDiv);
+
+                    // Draft bar
+                    const barDiv = document.createElement('div');
+                    barDiv.style.cssText = 'position: absolute; top: 16px; left: 60px; z-index: 10; display: flex; align-items: center; gap: 12px;';
+                    barDiv.innerHTML = draftBarHTML;
+                    slide.appendChild(barDiv);
+                }
             });
 
             // Kill animations
