@@ -1,3 +1,21 @@
+# Changes — March 26, 2026
+
+## Terminology
+
+- **Prototype → Iteration**: Replaced all 36 instances of "prototype" throughout the entire deck with "iteration" and contextual alternatives ("working version", "artifact"). Per CTO direction.
+- Vocabulary slide updated: "Prototype" entry renamed to "Iteration" with new definition.
+- Quote slide now reads: "They operate around an Iteration."
+- Varied usage to avoid overuse of any single term.
+
+## Dates
+- All dates updated to **March 26, 2026**.
+- Saved **March 25** version snapshot to `versions/2026-03-25.html`.
+
+## PDF
+- Regenerated **32-slide PDF** with all iteration terminology.
+
+---
+
 # Changes — March 25, 2026
 
 ## New Slides
