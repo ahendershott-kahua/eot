@@ -138,14 +138,14 @@ h1 {
 }
 
 .bullet-list li::before {
-    content: '';
+    content: '›';
     position: absolute;
     left: 0;
-    top: 10px;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: #007D99;
+    top: 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: #007D99;
+    line-height: 1.6;
 }
 
 /* ===== Flow Chain ===== */
@@ -162,14 +162,17 @@ h1 {
     align-items: center;
     justify-content: center;
     padding: 10px 20px;
-    background: #f0f0f0;
-    border: 1px solid #e0e0e0;
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(0, 0, 0, 0.06);
     border-radius: 8px;
     font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
     font-size: 15px;
     color: #1a1a1a;
     font-weight: 500;
     white-space: nowrap;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
 }
 
 .flow-arrow {
@@ -204,6 +207,26 @@ h1 {
     line-height: 1.35;
     max-width: 900px;
     letter-spacing: -0.02em;
+    position: relative;
+    z-index: 1;
+}
+
+.slide-content.slide-center {
+    position: relative;
+}
+
+.slide-content.slide-center::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(0,125,153,0.04) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
 }
 
 .conclusion-sub {
