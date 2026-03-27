@@ -207,26 +207,6 @@ h1 {
     line-height: 1.35;
     max-width: 900px;
     letter-spacing: -0.02em;
-    position: relative;
-    z-index: 1;
-}
-
-.slide-content.slide-center {
-    position: relative;
-}
-
-.slide-content.slide-center::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(0,125,153,0.04) 0%, transparent 70%);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 0;
 }
 
 .conclusion-sub {
