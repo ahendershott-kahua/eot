@@ -87,7 +87,7 @@ function startServer() {
 
             // Force every slide visible and add logo
             document.querySelectorAll('.slide').forEach(slide => {
-                slide.style.cssText = `
+                slide.style.cssText += `
                     display: flex !important; position: relative !important;
                     opacity: 1 !important; visibility: visible !important;
                     transform: none !important; width: 100% !important;
@@ -98,11 +98,13 @@ function startServer() {
                 `;
 
                 const isFullbleed = slide.hasAttribute('data-fullbleed');
+                const computedBg = window.getComputedStyle(slide).backgroundColor;
+                const isDark = computedBg.includes('0, 128, 155') || computedBg.includes('26, 26, 26');
 
                 // Kahua logo top-right (non-fullbleed slides only)
                 if (!isFullbleed) {
                     const logoDiv = document.createElement('div');
-                    logoDiv.style.cssText = 'position: absolute; top: 48px; right: 80px; z-index: 10;';
+                    logoDiv.style.cssText = `position: absolute; top: 48px; right: 80px; z-index: 10;${isDark ? ' filter: brightness(0) invert(1);' : ''}`;
                     if (logoSrc) {
                         logoDiv.innerHTML = `<img src="${logoSrc}" style="height: 44px;">`;
                     } else {
@@ -121,13 +123,13 @@ function startServer() {
                 if (!isFullbleed) {
                     // Corner brand circles
                     const brandDiv = document.createElement('div');
-                    brandDiv.style.cssText = 'position: absolute; top: 10px; left: 14px; z-index: 10;';
+                    brandDiv.style.cssText = `position: absolute; top: 10px; left: 14px; z-index: 10;${isDark ? ' filter: brightness(0) invert(1);' : ''}`;
                     brandDiv.innerHTML = cornerBrandHTML;
                     slide.appendChild(brandDiv);
 
                     // Draft bar
                     const barDiv = document.createElement('div');
-                    barDiv.style.cssText = 'position: absolute; top: 16px; left: 60px; z-index: 10; display: flex; align-items: center; gap: 12px;';
+                    barDiv.style.cssText = `position: absolute; top: 16px; left: 60px; z-index: 10; display: flex; align-items: center; gap: 12px;${isDark ? ' filter: brightness(0) invert(1);' : ''}`;
                     barDiv.innerHTML = draftBarHTML;
                     slide.appendChild(barDiv);
                 }
