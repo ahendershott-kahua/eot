@@ -114,24 +114,24 @@ const gateHTML = `<!DOCTYPE html>
     letter-spacing: 2px;
     text-transform: uppercase;
     text-align: center;
-    color: #ffffff;
-    background: #1a1a1a;
-    border: 1px solid rgba(255,255,255,0.1);
+    color: #1a1a1a;
+    background: #ffffff;
+    border: 1px solid rgba(0,0,0,0.1);
     border-radius: 100px;
     outline: none;
     transition: all 0.3s ease;
     font-family: inherit;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
   }
   
   .input-group input::placeholder {
-    color: rgba(255,255,255,0.3);
+    color: rgba(26,26,26,0.3);
   }
   
   .input-group input:focus {
-    background: #000000;
-    border-color: #00D2D3;
-    box-shadow: 0 0 0 4px rgba(0, 128, 155, 0.2);
+    background: #ffffff;
+    border-color: #00809B;
+    box-shadow: 0 0 0 4px rgba(0, 128, 155, 0.15);
   }
   
   .input-group input.error {
