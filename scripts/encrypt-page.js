@@ -55,105 +55,145 @@ const gateHTML = `<!DOCTYPE html>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif;
+    background: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    color: #1a1a1a;
+    overflow: hidden;
   }
-  .gate {
-    text-align: center;
-    max-width: 360px;
-    padding: 40px;
+  
+  /* SVG system grid background */
+  .bg-graphic {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 0;
+    mix-blend-mode: multiply;
   }
-  .gate h1 {
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 6px;
-    letter-spacing: -0.02em;
+
+  @keyframes orbit1 {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
   }
-  .gate p {
-    font-size: 13px;
-    color: #888;
-    margin-bottom: 32px;
+  @keyframes orbit2 {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(-360deg); }
   }
-  .input-group {
-    position: relative;
-    margin-bottom: 16px;
+  @keyframes orbit3 {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
   }
-  .input-group input {
-    width: 100%;
-    padding: 14px 16px;
-    font-size: 15px;
-    border: 1.5px solid #ddd;
-    border-radius: 10px;
-    outline: none;
-    transition: border-color 0.2s;
-    font-family: inherit;
-  }
-  .input-group input:focus {
-    border-color: #00809B;
-  }
-  .input-group input.error {
-    border-color: #e9001f;
-    animation: shake 0.4s ease;
-  }
-  button {
-    width: 100%;
-    padding: 14px;
-    font-size: 14px;
-    font-weight: 600;
-    color: #fff;
-    background: #1a1a1a;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background 0.2s, transform 0.1s;
-    font-family: inherit;
-  }
-  button:hover { background: #333; }
-  button:active { transform: scale(0.98); }
-  .error-msg {
-    font-size: 12px;
-    color: #e9001f;
-    margin-top: 12px;
-    opacity: 0;
-    transition: opacity 0.2s;
-  }
-  .error-msg.visible { opacity: 1; }
   @keyframes shake {
     0%, 100% { transform: translateX(0); }
     20%, 60% { transform: translateX(-6px); }
     40%, 80% { transform: translateX(6px); }
   }
-  .brand {
-    margin-bottom: 24px;
+
+  .gate {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
-  .brand svg { opacity: 0.15; }
+  
+  form {
+    position: relative;
+  }
+
+  .input-group input {
+    width: 280px;
+    padding: 18px 24px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #ffffff;
+    background: #1a1a1a;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 100px;
+    outline: none;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  }
+  
+  .input-group input::placeholder {
+    color: rgba(255,255,255,0.3);
+  }
+  
+  .input-group input:focus {
+    background: #000000;
+    border-color: #00D2D3;
+    box-shadow: 0 0 0 4px rgba(0, 128, 155, 0.2);
+  }
+  
+  .input-group input.error {
+    background: #e9001f;
+    border-color: transparent;
+    animation: shake 0.4s ease;
+  }
+
+  .error-msg {
+    position: absolute;
+    bottom: -32px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #e9001f;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  .error-msg.visible { opacity: 1; }
 </style>
 </head>
 <body>
-<div class="gate">
-  <div class="brand">
-    <svg width="40" height="36" viewBox="0 0 140 120" xmlns="http://www.w3.org/2000/svg">
-      <g><circle cx="50" cy="44" r="30" fill="none" stroke="#1a1a1a" stroke-width="3"/></g>
-      <g><circle cx="90" cy="44" r="30" fill="none" stroke="#1a1a1a" stroke-width="3" stroke-dasharray="4 3"/></g>
-      <g><circle cx="70" cy="74" r="30" fill="none" stroke="#1a1a1a" stroke-width="3"/></g>
-      <circle cx="70" cy="52" r="5" fill="#1a1a1a"/>
-    </svg>
+
+  <!-- The Animated System Graphic -->
+  <svg class="bg-graphic" width="576" height="528" viewBox="0 0 420 380" xmlns="http://www.w3.org/2000/svg">
+      <!-- Static System Grid Background -->
+      <g style="opacity:0.35;">
+          <circle cx="210" cy="190" r="240" fill="none" stroke="#1a1a1a" stroke-width="0.5" stroke-dasharray="4 8" />
+          <circle cx="210" cy="190" r="180" fill="none" stroke="#1a1a1a" stroke-width="0.5" />
+          <line x1="-30" y1="190" x2="450" y2="190" stroke="#1a1a1a" stroke-width="0.5" stroke-dasharray="2 6" />
+          <line x1="210" y1="-50" x2="210" y2="430" stroke="#1a1a1a" stroke-width="0.5" stroke-dasharray="2 6" />
+      </g>
+      <!-- Primary Circle (Teal) -->
+      <g style="transform-origin:210px 190px; animation:orbit1 40s linear infinite;">
+          <circle cx="130" cy="140" r="110" fill="rgba(0,128,155,0.06)" stroke="#00809B" stroke-width="8" />
+          <circle cx="130" cy="30" r="6" fill="#00809B" />
+      </g>
+      <!-- Secondary Circle (Red Dashed) -->
+      <g style="transform-origin:210px 190px; animation:orbit2 45s linear infinite reverse;">
+          <circle cx="290" cy="190" r="110" fill="rgba(233,0,31,0.03)" stroke="#e9001f" stroke-width="2" stroke-dasharray="6 4" />
+          <circle cx="400" cy="190" r="4" fill="#e9001f" />
+      </g>
+      <!-- Tertiary Circle (Orange) -->
+      <g style="transform-origin:210px 190px; animation:orbit3 50s linear infinite;">
+          <circle cx="170" cy="270" r="110" fill="rgba(255,153,29,0.06)" stroke="#FF991D" stroke-width="4" />
+          <circle cx="170" cy="380" r="5" fill="#FF991D" />
+      </g>
+  </svg>
+
+  <div class="gate">
+    <form id="gate-form" onsubmit="return tryDecrypt(event)">
+      <div class="input-group">
+        <input type="password" id="pw" placeholder="Enter Protocol" autocomplete="off" autofocus>
+      </div>
+      <button type="submit" style="display:none;"></button>
+      <div class="error-msg" id="err">Access Denied</div>
+    </form>
   </div>
-  <h1>Pod Execution Model</h1>
-  <p>Enter the password to continue</p>
-  <form id="gate-form" onsubmit="return tryDecrypt(event)">
-    <div class="input-group">
-      <input type="password" id="pw" placeholder="Password" autocomplete="off" autofocus>
-    </div>
-    <button type="submit">Continue</button>
-  </form>
-  <div class="error-msg" id="err">Incorrect password</div>
-</div>
 
 <script>
 const SALT = '${saltB64}';
