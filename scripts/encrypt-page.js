@@ -73,6 +73,7 @@ const gateHTML = `<!DOCTYPE html>
     pointer-events: none;
     z-index: 0;
     mix-blend-mode: multiply;
+    overflow: visible;
   }
 
   @keyframes orbit1 {
