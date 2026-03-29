@@ -3,6 +3,7 @@
     "generate-pdf": "node scripts/generate-pdf.js"
   },
   "dependencies": {
+    "jsdom": "^29.0.1",
     "puppeteer": "^24.40.0"
   }
 }
