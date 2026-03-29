@@ -135,9 +135,9 @@ function startServer() {
                 }
             });
 
-            // Kill animations
+            // Kill animations and problematic render effects for PDF
             const style = document.createElement('style');
-            style.textContent = '*, *::before, *::after { animation: none !important; transition: none !important; }';
+            style.textContent = '*, *::before, *::after { animation: none !important; transition: none !important; box-shadow: none !important; mix-blend-mode: normal !important; backdrop-filter: none !important; }';
             document.head.appendChild(style);
         });
 
